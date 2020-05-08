@@ -8,14 +8,14 @@ import (
 	"strings"
 	"testing"
 
-	cmm "github/HaoyangLiu/contract-simulation/contract/common"
-
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/stretchr/testify/assert"
+
+	cmm "github/HaoyangLiu/contract-simulation/contract/common"
 )
 
 var account, _ = cmm.FromHexKey("B7F5FE087D796A24E7D1215DDF809F101B3147CB8DB0B5B869A5CD7AFDEF9B16")
