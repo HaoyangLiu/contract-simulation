@@ -42,7 +42,7 @@ func TestSimulateRegister(t *testing.T) {
 
 	msg := ethereum.CallMsg{
 		From:     auth.From,
-		To:       &cmm.TokenHub,
+		To:       &cmm.RelayerHub,
 		Gas:      auth.GasLimit,
 		GasPrice: auth.GasPrice,
 		Value:    auth.Value,
