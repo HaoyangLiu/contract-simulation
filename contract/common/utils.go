@@ -5,6 +5,7 @@ import (
 	"log"
 	"math/big"
 
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
@@ -42,4 +43,13 @@ func SendEther(client *ethclient.Client, fromEO ExtAcc, toAddr common.Address, v
 	txhash := signedTx.Hash()
 	log.Printf("tx hash, sendEther: %s\n", txhash.Hex())
 	return txhash, nil
+}
+
+
+func GetCallOpts() (*bind.CallOpts, error) {
+	callOpts := &bind.CallOpts{
+		Pending: true,
+		Context: context.Background(),
+	}
+	return callOpts, nil
 }
