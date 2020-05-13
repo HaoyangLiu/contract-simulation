@@ -22,7 +22,7 @@ var receiveAccount = common.HexToAddress("0xaa25Aa7a19f9c426E07dee59b12f944f4d9f
 var relayerhubABI, _ = abi.JSON(strings.NewReader(RelayerhubABI))
 
 func TestSimulateRegister(t *testing.T) {
-	client, err := ethclient.Dial(cmm.Endpoint)
+	client, err := ethclient.Dial(cmm.TestnetEndpoint)
 	assert.NoError(t, err)
 
 	nonce, err := client.PendingNonceAt(context.Background(), account.Addr)
@@ -42,7 +42,7 @@ func TestSimulateRegister(t *testing.T) {
 
 	msg := ethereum.CallMsg{
 		From:     auth.From,
-		To:       &cmm.TokenHub,
+		To:       &cmm.RelayerHub,
 		Gas:      auth.GasLimit,
 		GasPrice: auth.GasPrice,
 		Value:    auth.Value,

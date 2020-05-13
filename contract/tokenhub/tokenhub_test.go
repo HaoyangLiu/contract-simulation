@@ -23,7 +23,7 @@ var receiveAccount = common.HexToAddress("0xaa25Aa7a19f9c426E07dee59b12f944f4d9f
 var tokenhubABI, _ = abi.JSON(strings.NewReader(TokenhubABI))
 
 func TestSimulateHandleBind(t *testing.T) {
-	client, err := ethclient.Dial(cmm.Endpoint)
+	client, err := ethclient.Dial(cmm.TestnetEndpoint)
 	assert.NoError(t, err)
 
 	nonce, err := client.PendingNonceAt(context.Background(), account.Addr)
