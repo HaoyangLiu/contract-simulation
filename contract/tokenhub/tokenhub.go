@@ -28,7 +28,7 @@ var (
 )
 
 // TokenhubABI is the input ABI used to generate the binding from.
-const TokenhubABI = "[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"expireTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"relayFee\",\"type\":\"uint256\"}],\"name\":\"LogBatchTransferOut\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"recipientAddrs\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"refundAddrs\",\"type\":\"address[]\"}],\"name\":\"LogBatchTransferOutAddrs\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"LogBindInvalidParameter\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"LogBindRejected\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalSupply\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"peggyAmount\",\"type\":\"uint256\"}],\"name\":\"LogBindRequest\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"totalSupply\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"peggyAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"LogBindSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"LogBindTimeout\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reason\",\"type\":\"uint16\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"actualBalance\",\"type\":\"uint256\"}],\"name\":\"LogRefundFailureInsufficientBalance\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reason\",\"type\":\"uint16\"}],\"name\":\"LogRefundFailureUnboundToken\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reason\",\"type\":\"uint16\"}],\"name\":\"LogRefundFailureUnknownReason\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"reason\",\"type\":\"uint16\"}],\"name\":\"LogRefundSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bep2TokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"actualBalance\",\"type\":\"uint256\"}],\"name\":\"LogTransferInFailureInsufficientBalance\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bep2TokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"expireTime\",\"type\":\"uint256\"}],\"name\":\"LogTransferInFailureTimeout\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bep2TokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"LogTransferInFailureUnboundToken\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bep2TokenAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"LogTransferInFailureUnknownReason\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"}],\"name\":\"LogTransferInSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sequence\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"expireTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"relayFee\",\"type\":\"uint256\"}],\"name\":\"LogTransferOut\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"lowLevelData\",\"type\":\"bytes\"}],\"name\":\"LogUnexpectedFailureAssertionInBEP2E\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reason\",\"type\":\"string\"}],\"name\":\"LogUnexpectedRevertInBEP2E\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"BEP2_TOKEN_DECIMALS\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"BEP2_TOKEN_SYMBOL_FOR_BNB\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"BIND_CHANNEL_ID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"GOV_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INCENTIVIZE_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"LIGHT_CLIENT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAXIMUM_BEP2E_SYMBOL_LEN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_BEP2_TOTAL_SUPPLY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_GAS_FOR_CALLING_BEP2E\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MINIMUM_BEP2E_SYMBOL_LEN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"REFUND_CHANNEL_ID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"RELAYERHUB_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"RELAYER_REWARD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SLASH_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SYSTEM_REWARD_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOKEN_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_CHANNEL_ID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VALIDATOR_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"_bep2SymbolToContractAddr\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"_bep2eContractDecimals\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_bindChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"_bindPackageRecord\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"totalSupply\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"peggyAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"bep2eDecimals\",\"type\":\"uint8\"},{\"internalType\":\"uint64\",\"name\":\"expireTime\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"relayFee\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_bindResponseChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"_contractAddrToBEP2Symbol\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_refundChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_transferInChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_transferInFailureChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"_transferOutChannelSequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"bep2Symbol\",\"type\":\"string\"}],\"name\":\"approveBind\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"recipientAddrs\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"address[]\",\"name\":\"refundAddrs\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"expireTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"relayFee\",\"type\":\"uint256\"}],\"name\":\"batchTransferOut\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"symbol\",\"type\":\"string\"}],\"name\":\"bep2TokenSymbolConvert\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"bep2eSymbol\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"bep2TokenSymbol\",\"type\":\"bytes32\"}],\"name\":\"checkSymbol\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bep2eTokenDecimals\",\"type\":\"uint256\"}],\"name\":\"convertToBep2Amount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"bep2Symbol\",\"type\":\"string\"}],\"name\":\"expireBind\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"height\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"packageSequence\",\"type\":\"uint64\"}],\"name\":\"handleBindPackage\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"height\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"packageSequence\",\"type\":\"uint64\"}],\"name\":\"handleRefundPackage\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"height\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"packageSequence\",\"type\":\"uint64\"}],\"name\":\"handleTransferInPackage\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"minimumRelayFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"refundRelayReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"bep2Symbol\",\"type\":\"string\"}],\"name\":\"rejectBind\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expireTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"relayFee\",\"type\":\"uint256\"}],\"name\":\"transferOut\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}]"
+const TokenhubABI = "[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"paramChange\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"receiveDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"bep2eAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"status\",\"type\":\"uint32\"}],\"name\":\"refundFailure\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"bep2eAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"status\",\"type\":\"uint32\"}],\"name\":\"refundSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"rewardTo\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"bep2eAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferInSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"bep2eAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"senderAddr\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferOutSuccess\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"unexpectedPackage\",\"type\":\"event\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"BEP2_TOKEN_DECIMALS\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"BEP2_TOKEN_SYMBOL_FOR_BNB\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"BIND_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CODE_OK\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CROSS_CHAIN_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_FAIL_DECODE\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"GOV_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"GOV_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INCENTIVIZE_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INIT_MINIMUM_RELAY_FEE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"LIGHT_CLIENT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAXIMUM_BEP2E_SYMBOL_LEN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_BEP2_TOTAL_SUPPLY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MAX_GAS_FOR_CALLING_BEP2E\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"MINIMUM_BEP2E_SYMBOL_LEN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"RELAYERHUB_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SLASH_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SLASH_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"STAKING_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SYSTEM_REWARD_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOKEN_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOKEN_MANAGER_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_FAILURE_INSUFFICIENT_BALANCE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_FAILURE_NON_PAYABLE_RECIPIENT\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_FAILURE_TIMEOUT\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_FAILURE_UNBOUND_TOKEN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_FAILURE_UNKNOWN\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_SUCCESS\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_OUT_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VALIDATOR_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"alreadyInit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"recipientAddrs\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"address[]\",\"name\":\"refundAddrs\",\"type\":\"address[]\"},{\"internalType\":\"uint64\",\"name\":\"expireTime\",\"type\":\"uint64\"}],\"name\":\"batchTransferOutBNB\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"bep2eContractDecimals\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"bep2Symbol\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"decimals\",\"type\":\"uint256\"}],\"name\":\"bindToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"bscChainID\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"addresspayable\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"}],\"name\":\"getBep2SymbolByContractAddr\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"}],\"name\":\"getBoundBep2Symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"bep2Symbol\",\"type\":\"string\"}],\"name\":\"getBoundContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"bep2Symbol\",\"type\":\"bytes32\"}],\"name\":\"getContractAddrByBEP2Symbol\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getMiniRelayFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleAckPackage\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleFailAckPackage\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleSynPackage\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"init\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"relayFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"expireTime\",\"type\":\"uint64\"}],\"name\":\"transferOut\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"bep2Symbol\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"contractAddr\",\"type\":\"address\"}],\"name\":\"unbindToken\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"updateParam\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
 
 // Tokenhub is an auto generated Go binding around an Ethereum contract.
 type Tokenhub struct {
@@ -224,30 +224,134 @@ func (_Tokenhub *TokenhubCallerSession) BEP2TOKENSYMBOLFORBNB() ([32]byte, error
 	return _Tokenhub.Contract.BEP2TOKENSYMBOLFORBNB(&_Tokenhub.CallOpts)
 }
 
-// BINDCHANNELID is a free data retrieval call binding the contract method 0xc3dc4d9a.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function BIND_CHANNEL_ID() constant returns(uint8)
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubCaller) BINDCHANNELID(opts *bind.CallOpts) (uint8, error) {
 	var (
 		ret0 = new(uint8)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "BIND_CHANNEL_ID")
+	err := _Tokenhub.contract.Call(opts, out, "BIND_CHANNELID")
 	return *ret0, err
 }
 
-// BINDCHANNELID is a free data retrieval call binding the contract method 0xc3dc4d9a.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function BIND_CHANNEL_ID() constant returns(uint8)
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubSession) BINDCHANNELID() (uint8, error) {
 	return _Tokenhub.Contract.BINDCHANNELID(&_Tokenhub.CallOpts)
 }
 
-// BINDCHANNELID is a free data retrieval call binding the contract method 0xc3dc4d9a.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function BIND_CHANNEL_ID() constant returns(uint8)
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubCallerSession) BINDCHANNELID() (uint8, error) {
 	return _Tokenhub.Contract.BINDCHANNELID(&_Tokenhub.CallOpts)
+}
+
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
+//
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Tokenhub *TokenhubCaller) CODEOK(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "CODE_OK")
+	return *ret0, err
+}
+
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
+//
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Tokenhub *TokenhubSession) CODEOK() (uint32, error) {
+	return _Tokenhub.Contract.CODEOK(&_Tokenhub.CallOpts)
+}
+
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
+//
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Tokenhub *TokenhubCallerSession) CODEOK() (uint32, error) {
+	return _Tokenhub.Contract.CODEOK(&_Tokenhub.CallOpts)
+}
+
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
+//
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubCaller) CROSSCHAINCONTRACTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "CROSS_CHAIN_CONTRACT_ADDR")
+	return *ret0, err
+}
+
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
+//
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubSession) CROSSCHAINCONTRACTADDR() (common.Address, error) {
+	return _Tokenhub.Contract.CROSSCHAINCONTRACTADDR(&_Tokenhub.CallOpts)
+}
+
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
+//
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubCallerSession) CROSSCHAINCONTRACTADDR() (common.Address, error) {
+	return _Tokenhub.Contract.CROSSCHAINCONTRACTADDR(&_Tokenhub.CallOpts)
+}
+
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
+//
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Tokenhub *TokenhubCaller) ERRORFAILDECODE(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "ERROR_FAIL_DECODE")
+	return *ret0, err
+}
+
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
+//
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Tokenhub *TokenhubSession) ERRORFAILDECODE() (uint32, error) {
+	return _Tokenhub.Contract.ERRORFAILDECODE(&_Tokenhub.CallOpts)
+}
+
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
+//
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Tokenhub *TokenhubCallerSession) ERRORFAILDECODE() (uint32, error) {
+	return _Tokenhub.Contract.ERRORFAILDECODE(&_Tokenhub.CallOpts)
+}
+
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
+//
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) GOVCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "GOV_CHANNELID")
+	return *ret0, err
+}
+
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
+//
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) GOVCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.GOVCHANNELID(&_Tokenhub.CallOpts)
+}
+
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
+//
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) GOVCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.GOVCHANNELID(&_Tokenhub.CallOpts)
 }
 
 // GOVHUBADDR is a free data retrieval call binding the contract method 0x9dc09262.
@@ -300,6 +404,32 @@ func (_Tokenhub *TokenhubSession) INCENTIVIZEADDR() (common.Address, error) {
 // Solidity: function INCENTIVIZE_ADDR() constant returns(address)
 func (_Tokenhub *TokenhubCallerSession) INCENTIVIZEADDR() (common.Address, error) {
 	return _Tokenhub.Contract.INCENTIVIZEADDR(&_Tokenhub.CallOpts)
+}
+
+// INITMINIMUMRELAYFEE is a free data retrieval call binding the contract method 0x50432d32.
+//
+// Solidity: function INIT_MINIMUM_RELAY_FEE() constant returns(uint256)
+func (_Tokenhub *TokenhubCaller) INITMINIMUMRELAYFEE(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "INIT_MINIMUM_RELAY_FEE")
+	return *ret0, err
+}
+
+// INITMINIMUMRELAYFEE is a free data retrieval call binding the contract method 0x50432d32.
+//
+// Solidity: function INIT_MINIMUM_RELAY_FEE() constant returns(uint256)
+func (_Tokenhub *TokenhubSession) INITMINIMUMRELAYFEE() (*big.Int, error) {
+	return _Tokenhub.Contract.INITMINIMUMRELAYFEE(&_Tokenhub.CallOpts)
+}
+
+// INITMINIMUMRELAYFEE is a free data retrieval call binding the contract method 0x50432d32.
+//
+// Solidity: function INIT_MINIMUM_RELAY_FEE() constant returns(uint256)
+func (_Tokenhub *TokenhubCallerSession) INITMINIMUMRELAYFEE() (*big.Int, error) {
+	return _Tokenhub.Contract.INITMINIMUMRELAYFEE(&_Tokenhub.CallOpts)
 }
 
 // LIGHTCLIENTADDR is a free data retrieval call binding the contract method 0xdc927faf.
@@ -432,32 +562,6 @@ func (_Tokenhub *TokenhubCallerSession) MINIMUMBEP2ESYMBOLLEN() (uint8, error) {
 	return _Tokenhub.Contract.MINIMUMBEP2ESYMBOLLEN(&_Tokenhub.CallOpts)
 }
 
-// REFUNDCHANNELID is a free data retrieval call binding the contract method 0x6bc2ecdb.
-//
-// Solidity: function REFUND_CHANNEL_ID() constant returns(uint8)
-func (_Tokenhub *TokenhubCaller) REFUNDCHANNELID(opts *bind.CallOpts) (uint8, error) {
-	var (
-		ret0 = new(uint8)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "REFUND_CHANNEL_ID")
-	return *ret0, err
-}
-
-// REFUNDCHANNELID is a free data retrieval call binding the contract method 0x6bc2ecdb.
-//
-// Solidity: function REFUND_CHANNEL_ID() constant returns(uint8)
-func (_Tokenhub *TokenhubSession) REFUNDCHANNELID() (uint8, error) {
-	return _Tokenhub.Contract.REFUNDCHANNELID(&_Tokenhub.CallOpts)
-}
-
-// REFUNDCHANNELID is a free data retrieval call binding the contract method 0x6bc2ecdb.
-//
-// Solidity: function REFUND_CHANNEL_ID() constant returns(uint8)
-func (_Tokenhub *TokenhubCallerSession) REFUNDCHANNELID() (uint8, error) {
-	return _Tokenhub.Contract.REFUNDCHANNELID(&_Tokenhub.CallOpts)
-}
-
 // RELAYERHUBCONTRACTADDR is a free data retrieval call binding the contract method 0xa1a11bf5.
 //
 // Solidity: function RELAYERHUB_CONTRACT_ADDR() constant returns(address)
@@ -484,30 +588,30 @@ func (_Tokenhub *TokenhubCallerSession) RELAYERHUBCONTRACTADDR() (common.Address
 	return _Tokenhub.Contract.RELAYERHUBCONTRACTADDR(&_Tokenhub.CallOpts)
 }
 
-// RELAYERREWARD is a free data retrieval call binding the contract method 0x75405d0d.
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
 //
-// Solidity: function RELAYER_REWARD() constant returns(uint256)
-func (_Tokenhub *TokenhubCaller) RELAYERREWARD(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) SLASHCHANNELID(opts *bind.CallOpts) (uint8, error) {
 	var (
-		ret0 = new(*big.Int)
+		ret0 = new(uint8)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "RELAYER_REWARD")
+	err := _Tokenhub.contract.Call(opts, out, "SLASH_CHANNELID")
 	return *ret0, err
 }
 
-// RELAYERREWARD is a free data retrieval call binding the contract method 0x75405d0d.
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
 //
-// Solidity: function RELAYER_REWARD() constant returns(uint256)
-func (_Tokenhub *TokenhubSession) RELAYERREWARD() (*big.Int, error) {
-	return _Tokenhub.Contract.RELAYERREWARD(&_Tokenhub.CallOpts)
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) SLASHCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.SLASHCHANNELID(&_Tokenhub.CallOpts)
 }
 
-// RELAYERREWARD is a free data retrieval call binding the contract method 0x75405d0d.
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
 //
-// Solidity: function RELAYER_REWARD() constant returns(uint256)
-func (_Tokenhub *TokenhubCallerSession) RELAYERREWARD() (*big.Int, error) {
-	return _Tokenhub.Contract.RELAYERREWARD(&_Tokenhub.CallOpts)
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) SLASHCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.SLASHCHANNELID(&_Tokenhub.CallOpts)
 }
 
 // SLASHCONTRACTADDR is a free data retrieval call binding the contract method 0x43756e5c.
@@ -534,6 +638,32 @@ func (_Tokenhub *TokenhubSession) SLASHCONTRACTADDR() (common.Address, error) {
 // Solidity: function SLASH_CONTRACT_ADDR() constant returns(address)
 func (_Tokenhub *TokenhubCallerSession) SLASHCONTRACTADDR() (common.Address, error) {
 	return _Tokenhub.Contract.SLASHCONTRACTADDR(&_Tokenhub.CallOpts)
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) STAKINGCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "STAKING_CHANNELID")
+	return *ret0, err
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) STAKINGCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.STAKINGCHANNELID(&_Tokenhub.CallOpts)
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) STAKINGCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.STAKINGCHANNELID(&_Tokenhub.CallOpts)
 }
 
 // SYSTEMREWARDADDR is a free data retrieval call binding the contract method 0xc81b1662.
@@ -588,30 +718,238 @@ func (_Tokenhub *TokenhubCallerSession) TOKENHUBADDR() (common.Address, error) {
 	return _Tokenhub.Contract.TOKENHUBADDR(&_Tokenhub.CallOpts)
 }
 
-// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0xcc12eabc.
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
 //
-// Solidity: function TRANSFER_IN_CHANNEL_ID() constant returns(uint8)
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubCaller) TOKENMANAGERADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TOKEN_MANAGER_ADDR")
+	return *ret0, err
+}
+
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
+//
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubSession) TOKENMANAGERADDR() (common.Address, error) {
+	return _Tokenhub.Contract.TOKENMANAGERADDR(&_Tokenhub.CallOpts)
+}
+
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
+//
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Tokenhub *TokenhubCallerSession) TOKENMANAGERADDR() (common.Address, error) {
+	return _Tokenhub.Contract.TOKENMANAGERADDR(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
+//
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubCaller) TRANSFERINCHANNELID(opts *bind.CallOpts) (uint8, error) {
 	var (
 		ret0 = new(uint8)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_CHANNEL_ID")
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_CHANNELID")
 	return *ret0, err
 }
 
-// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0xcc12eabc.
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
 //
-// Solidity: function TRANSFER_IN_CHANNEL_ID() constant returns(uint8)
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubSession) TRANSFERINCHANNELID() (uint8, error) {
 	return _Tokenhub.Contract.TRANSFERINCHANNELID(&_Tokenhub.CallOpts)
 }
 
-// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0xcc12eabc.
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
 //
-// Solidity: function TRANSFER_IN_CHANNEL_ID() constant returns(uint8)
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
 func (_Tokenhub *TokenhubCallerSession) TRANSFERINCHANNELID() (uint8, error) {
 	return _Tokenhub.Contract.TRANSFERINCHANNELID(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREINSUFFICIENTBALANCE is a free data retrieval call binding the contract method 0xa7c9f02d.
+//
+// Solidity: function TRANSFER_IN_FAILURE_INSUFFICIENT_BALANCE() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINFAILUREINSUFFICIENTBALANCE(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_FAILURE_INSUFFICIENT_BALANCE")
+	return *ret0, err
+}
+
+// TRANSFERINFAILUREINSUFFICIENTBALANCE is a free data retrieval call binding the contract method 0xa7c9f02d.
+//
+// Solidity: function TRANSFER_IN_FAILURE_INSUFFICIENT_BALANCE() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINFAILUREINSUFFICIENTBALANCE() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREINSUFFICIENTBALANCE(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREINSUFFICIENTBALANCE is a free data retrieval call binding the contract method 0xa7c9f02d.
+//
+// Solidity: function TRANSFER_IN_FAILURE_INSUFFICIENT_BALANCE() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINFAILUREINSUFFICIENTBALANCE() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREINSUFFICIENTBALANCE(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILURENONPAYABLERECIPIENT is a free data retrieval call binding the contract method 0xebf71d53.
+//
+// Solidity: function TRANSFER_IN_FAILURE_NON_PAYABLE_RECIPIENT() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINFAILURENONPAYABLERECIPIENT(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_FAILURE_NON_PAYABLE_RECIPIENT")
+	return *ret0, err
+}
+
+// TRANSFERINFAILURENONPAYABLERECIPIENT is a free data retrieval call binding the contract method 0xebf71d53.
+//
+// Solidity: function TRANSFER_IN_FAILURE_NON_PAYABLE_RECIPIENT() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINFAILURENONPAYABLERECIPIENT() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILURENONPAYABLERECIPIENT(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILURENONPAYABLERECIPIENT is a free data retrieval call binding the contract method 0xebf71d53.
+//
+// Solidity: function TRANSFER_IN_FAILURE_NON_PAYABLE_RECIPIENT() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINFAILURENONPAYABLERECIPIENT() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILURENONPAYABLERECIPIENT(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILURETIMEOUT is a free data retrieval call binding the contract method 0x8b87b21f.
+//
+// Solidity: function TRANSFER_IN_FAILURE_TIMEOUT() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINFAILURETIMEOUT(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_FAILURE_TIMEOUT")
+	return *ret0, err
+}
+
+// TRANSFERINFAILURETIMEOUT is a free data retrieval call binding the contract method 0x8b87b21f.
+//
+// Solidity: function TRANSFER_IN_FAILURE_TIMEOUT() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINFAILURETIMEOUT() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILURETIMEOUT(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILURETIMEOUT is a free data retrieval call binding the contract method 0x8b87b21f.
+//
+// Solidity: function TRANSFER_IN_FAILURE_TIMEOUT() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINFAILURETIMEOUT() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILURETIMEOUT(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREUNBOUNDTOKEN is a free data retrieval call binding the contract method 0xff9c0027.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNBOUND_TOKEN() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINFAILUREUNBOUNDTOKEN(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_FAILURE_UNBOUND_TOKEN")
+	return *ret0, err
+}
+
+// TRANSFERINFAILUREUNBOUNDTOKEN is a free data retrieval call binding the contract method 0xff9c0027.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNBOUND_TOKEN() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINFAILUREUNBOUNDTOKEN() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREUNBOUNDTOKEN(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREUNBOUNDTOKEN is a free data retrieval call binding the contract method 0xff9c0027.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNBOUND_TOKEN() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINFAILUREUNBOUNDTOKEN() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREUNBOUNDTOKEN(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREUNKNOWN is a free data retrieval call binding the contract method 0xf0148472.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNKNOWN() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINFAILUREUNKNOWN(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_FAILURE_UNKNOWN")
+	return *ret0, err
+}
+
+// TRANSFERINFAILUREUNKNOWN is a free data retrieval call binding the contract method 0xf0148472.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNKNOWN() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINFAILUREUNKNOWN() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREUNKNOWN(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINFAILUREUNKNOWN is a free data retrieval call binding the contract method 0xf0148472.
+//
+// Solidity: function TRANSFER_IN_FAILURE_UNKNOWN() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINFAILUREUNKNOWN() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINFAILUREUNKNOWN(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINSUCCESS is a free data retrieval call binding the contract method 0xa496fba2.
+//
+// Solidity: function TRANSFER_IN_SUCCESS() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFERINSUCCESS(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_IN_SUCCESS")
+	return *ret0, err
+}
+
+// TRANSFERINSUCCESS is a free data retrieval call binding the contract method 0xa496fba2.
+//
+// Solidity: function TRANSFER_IN_SUCCESS() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFERINSUCCESS() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINSUCCESS(&_Tokenhub.CallOpts)
+}
+
+// TRANSFERINSUCCESS is a free data retrieval call binding the contract method 0xa496fba2.
+//
+// Solidity: function TRANSFER_IN_SUCCESS() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFERINSUCCESS() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFERINSUCCESS(&_Tokenhub.CallOpts)
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCaller) TRANSFEROUTCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Tokenhub.contract.Call(opts, out, "TRANSFER_OUT_CHANNELID")
+	return *ret0, err
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubSession) TRANSFEROUTCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFEROUTCHANNELID(&_Tokenhub.CallOpts)
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Tokenhub *TokenhubCallerSession) TRANSFEROUTCHANNELID() (uint8, error) {
+	return _Tokenhub.Contract.TRANSFEROUTCHANNELID(&_Tokenhub.CallOpts)
 }
 
 // VALIDATORCONTRACTADDR is a free data retrieval call binding the contract method 0xf9a2bbc7.
@@ -640,597 +978,453 @@ func (_Tokenhub *TokenhubCallerSession) VALIDATORCONTRACTADDR() (common.Address,
 	return _Tokenhub.Contract.VALIDATORCONTRACTADDR(&_Tokenhub.CallOpts)
 }
 
-// Bep2SymbolToContractAddr is a free data retrieval call binding the contract method 0x66be7945.
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
 //
-// Solidity: function _bep2SymbolToContractAddr(bytes32 ) constant returns(address)
-func (_Tokenhub *TokenhubCaller) Bep2SymbolToContractAddr(opts *bind.CallOpts, arg0 [32]byte) (common.Address, error) {
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Tokenhub *TokenhubCaller) AlreadyInit(opts *bind.CallOpts) (bool, error) {
 	var (
-		ret0 = new(common.Address)
+		ret0 = new(bool)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_bep2SymbolToContractAddr", arg0)
+	err := _Tokenhub.contract.Call(opts, out, "alreadyInit")
 	return *ret0, err
 }
 
-// Bep2SymbolToContractAddr is a free data retrieval call binding the contract method 0x66be7945.
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
 //
-// Solidity: function _bep2SymbolToContractAddr(bytes32 ) constant returns(address)
-func (_Tokenhub *TokenhubSession) Bep2SymbolToContractAddr(arg0 [32]byte) (common.Address, error) {
-	return _Tokenhub.Contract.Bep2SymbolToContractAddr(&_Tokenhub.CallOpts, arg0)
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Tokenhub *TokenhubSession) AlreadyInit() (bool, error) {
+	return _Tokenhub.Contract.AlreadyInit(&_Tokenhub.CallOpts)
 }
 
-// Bep2SymbolToContractAddr is a free data retrieval call binding the contract method 0x66be7945.
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
 //
-// Solidity: function _bep2SymbolToContractAddr(bytes32 ) constant returns(address)
-func (_Tokenhub *TokenhubCallerSession) Bep2SymbolToContractAddr(arg0 [32]byte) (common.Address, error) {
-	return _Tokenhub.Contract.Bep2SymbolToContractAddr(&_Tokenhub.CallOpts, arg0)
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Tokenhub *TokenhubCallerSession) AlreadyInit() (bool, error) {
+	return _Tokenhub.Contract.AlreadyInit(&_Tokenhub.CallOpts)
 }
 
-// Bep2eContractDecimals is a free data retrieval call binding the contract method 0x7f6a7a9e.
+// Bep2eContractDecimals is a free data retrieval call binding the contract method 0xa5cd588b.
 //
-// Solidity: function _bep2eContractDecimals(address ) constant returns(uint256)
+// Solidity: function bep2eContractDecimals(address ) constant returns(uint256)
 func (_Tokenhub *TokenhubCaller) Bep2eContractDecimals(opts *bind.CallOpts, arg0 common.Address) (*big.Int, error) {
 	var (
 		ret0 = new(*big.Int)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_bep2eContractDecimals", arg0)
+	err := _Tokenhub.contract.Call(opts, out, "bep2eContractDecimals", arg0)
 	return *ret0, err
 }
 
-// Bep2eContractDecimals is a free data retrieval call binding the contract method 0x7f6a7a9e.
+// Bep2eContractDecimals is a free data retrieval call binding the contract method 0xa5cd588b.
 //
-// Solidity: function _bep2eContractDecimals(address ) constant returns(uint256)
+// Solidity: function bep2eContractDecimals(address ) constant returns(uint256)
 func (_Tokenhub *TokenhubSession) Bep2eContractDecimals(arg0 common.Address) (*big.Int, error) {
 	return _Tokenhub.Contract.Bep2eContractDecimals(&_Tokenhub.CallOpts, arg0)
 }
 
-// Bep2eContractDecimals is a free data retrieval call binding the contract method 0x7f6a7a9e.
+// Bep2eContractDecimals is a free data retrieval call binding the contract method 0xa5cd588b.
 //
-// Solidity: function _bep2eContractDecimals(address ) constant returns(uint256)
+// Solidity: function bep2eContractDecimals(address ) constant returns(uint256)
 func (_Tokenhub *TokenhubCallerSession) Bep2eContractDecimals(arg0 common.Address) (*big.Int, error) {
 	return _Tokenhub.Contract.Bep2eContractDecimals(&_Tokenhub.CallOpts, arg0)
 }
 
-// BindChannelSequence is a free data retrieval call binding the contract method 0xd891ccb2.
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
 //
-// Solidity: function _bindChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) BindChannelSequence(opts *bind.CallOpts) (uint64, error) {
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Tokenhub *TokenhubCaller) BscChainID(opts *bind.CallOpts) (uint16, error) {
 	var (
-		ret0 = new(uint64)
+		ret0 = new(uint16)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_bindChannelSequence")
+	err := _Tokenhub.contract.Call(opts, out, "bscChainID")
 	return *ret0, err
 }
 
-// BindChannelSequence is a free data retrieval call binding the contract method 0xd891ccb2.
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
 //
-// Solidity: function _bindChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) BindChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.BindChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Tokenhub *TokenhubSession) BscChainID() (uint16, error) {
+	return _Tokenhub.Contract.BscChainID(&_Tokenhub.CallOpts)
 }
 
-// BindChannelSequence is a free data retrieval call binding the contract method 0xd891ccb2.
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
 //
-// Solidity: function _bindChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) BindChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.BindChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Tokenhub *TokenhubCallerSession) BscChainID() (uint16, error) {
+	return _Tokenhub.Contract.BscChainID(&_Tokenhub.CallOpts)
 }
 
-// BindPackageRecord is a free data retrieval call binding the contract method 0xdf014119.
+// GetBep2SymbolByContractAddr is a free data retrieval call binding the contract method 0xbd466461.
 //
-// Solidity: function _bindPackageRecord(bytes32 ) constant returns(bytes32 bep2TokenSymbol, address contractAddr, uint256 totalSupply, uint256 peggyAmount, uint8 bep2eDecimals, uint64 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubCaller) BindPackageRecord(opts *bind.CallOpts, arg0 [32]byte) (struct {
-	Bep2TokenSymbol [32]byte
-	ContractAddr    common.Address
-	TotalSupply     *big.Int
-	PeggyAmount     *big.Int
-	Bep2eDecimals   uint8
-	ExpireTime      uint64
-	RelayFee        *big.Int
-}, error) {
-	ret := new(struct {
-		Bep2TokenSymbol [32]byte
-		ContractAddr    common.Address
-		TotalSupply     *big.Int
-		PeggyAmount     *big.Int
-		Bep2eDecimals   uint8
-		ExpireTime      uint64
-		RelayFee        *big.Int
-	})
-	out := ret
-	err := _Tokenhub.contract.Call(opts, out, "_bindPackageRecord", arg0)
-	return *ret, err
-}
-
-// BindPackageRecord is a free data retrieval call binding the contract method 0xdf014119.
-//
-// Solidity: function _bindPackageRecord(bytes32 ) constant returns(bytes32 bep2TokenSymbol, address contractAddr, uint256 totalSupply, uint256 peggyAmount, uint8 bep2eDecimals, uint64 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubSession) BindPackageRecord(arg0 [32]byte) (struct {
-	Bep2TokenSymbol [32]byte
-	ContractAddr    common.Address
-	TotalSupply     *big.Int
-	PeggyAmount     *big.Int
-	Bep2eDecimals   uint8
-	ExpireTime      uint64
-	RelayFee        *big.Int
-}, error) {
-	return _Tokenhub.Contract.BindPackageRecord(&_Tokenhub.CallOpts, arg0)
-}
-
-// BindPackageRecord is a free data retrieval call binding the contract method 0xdf014119.
-//
-// Solidity: function _bindPackageRecord(bytes32 ) constant returns(bytes32 bep2TokenSymbol, address contractAddr, uint256 totalSupply, uint256 peggyAmount, uint8 bep2eDecimals, uint64 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubCallerSession) BindPackageRecord(arg0 [32]byte) (struct {
-	Bep2TokenSymbol [32]byte
-	ContractAddr    common.Address
-	TotalSupply     *big.Int
-	PeggyAmount     *big.Int
-	Bep2eDecimals   uint8
-	ExpireTime      uint64
-	RelayFee        *big.Int
-}, error) {
-	return _Tokenhub.Contract.BindPackageRecord(&_Tokenhub.CallOpts, arg0)
-}
-
-// BindResponseChannelSequence is a free data retrieval call binding the contract method 0x716c9dd5.
-//
-// Solidity: function _bindResponseChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) BindResponseChannelSequence(opts *bind.CallOpts) (uint64, error) {
-	var (
-		ret0 = new(uint64)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_bindResponseChannelSequence")
-	return *ret0, err
-}
-
-// BindResponseChannelSequence is a free data retrieval call binding the contract method 0x716c9dd5.
-//
-// Solidity: function _bindResponseChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) BindResponseChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.BindResponseChannelSequence(&_Tokenhub.CallOpts)
-}
-
-// BindResponseChannelSequence is a free data retrieval call binding the contract method 0x716c9dd5.
-//
-// Solidity: function _bindResponseChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) BindResponseChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.BindResponseChannelSequence(&_Tokenhub.CallOpts)
-}
-
-// ContractAddrToBEP2Symbol is a free data retrieval call binding the contract method 0x9710e7f6.
-//
-// Solidity: function _contractAddrToBEP2Symbol(address ) constant returns(bytes32)
-func (_Tokenhub *TokenhubCaller) ContractAddrToBEP2Symbol(opts *bind.CallOpts, arg0 common.Address) ([32]byte, error) {
+// Solidity: function getBep2SymbolByContractAddr(address contractAddr) constant returns(bytes32)
+func (_Tokenhub *TokenhubCaller) GetBep2SymbolByContractAddr(opts *bind.CallOpts, contractAddr common.Address) ([32]byte, error) {
 	var (
 		ret0 = new([32]byte)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_contractAddrToBEP2Symbol", arg0)
+	err := _Tokenhub.contract.Call(opts, out, "getBep2SymbolByContractAddr", contractAddr)
 	return *ret0, err
 }
 
-// ContractAddrToBEP2Symbol is a free data retrieval call binding the contract method 0x9710e7f6.
+// GetBep2SymbolByContractAddr is a free data retrieval call binding the contract method 0xbd466461.
 //
-// Solidity: function _contractAddrToBEP2Symbol(address ) constant returns(bytes32)
-func (_Tokenhub *TokenhubSession) ContractAddrToBEP2Symbol(arg0 common.Address) ([32]byte, error) {
-	return _Tokenhub.Contract.ContractAddrToBEP2Symbol(&_Tokenhub.CallOpts, arg0)
+// Solidity: function getBep2SymbolByContractAddr(address contractAddr) constant returns(bytes32)
+func (_Tokenhub *TokenhubSession) GetBep2SymbolByContractAddr(contractAddr common.Address) ([32]byte, error) {
+	return _Tokenhub.Contract.GetBep2SymbolByContractAddr(&_Tokenhub.CallOpts, contractAddr)
 }
 
-// ContractAddrToBEP2Symbol is a free data retrieval call binding the contract method 0x9710e7f6.
+// GetBep2SymbolByContractAddr is a free data retrieval call binding the contract method 0xbd466461.
 //
-// Solidity: function _contractAddrToBEP2Symbol(address ) constant returns(bytes32)
-func (_Tokenhub *TokenhubCallerSession) ContractAddrToBEP2Symbol(arg0 common.Address) ([32]byte, error) {
-	return _Tokenhub.Contract.ContractAddrToBEP2Symbol(&_Tokenhub.CallOpts, arg0)
+// Solidity: function getBep2SymbolByContractAddr(address contractAddr) constant returns(bytes32)
+func (_Tokenhub *TokenhubCallerSession) GetBep2SymbolByContractAddr(contractAddr common.Address) ([32]byte, error) {
+	return _Tokenhub.Contract.GetBep2SymbolByContractAddr(&_Tokenhub.CallOpts, contractAddr)
 }
 
-// RefundChannelSequence is a free data retrieval call binding the contract method 0x4e4a70e6.
+// GetBoundBep2Symbol is a free data retrieval call binding the contract method 0xfc1a598f.
 //
-// Solidity: function _refundChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) RefundChannelSequence(opts *bind.CallOpts) (uint64, error) {
+// Solidity: function getBoundBep2Symbol(address contractAddr) constant returns(string)
+func (_Tokenhub *TokenhubCaller) GetBoundBep2Symbol(opts *bind.CallOpts, contractAddr common.Address) (string, error) {
 	var (
-		ret0 = new(uint64)
+		ret0 = new(string)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_refundChannelSequence")
+	err := _Tokenhub.contract.Call(opts, out, "getBoundBep2Symbol", contractAddr)
 	return *ret0, err
 }
 
-// RefundChannelSequence is a free data retrieval call binding the contract method 0x4e4a70e6.
+// GetBoundBep2Symbol is a free data retrieval call binding the contract method 0xfc1a598f.
 //
-// Solidity: function _refundChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) RefundChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.RefundChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getBoundBep2Symbol(address contractAddr) constant returns(string)
+func (_Tokenhub *TokenhubSession) GetBoundBep2Symbol(contractAddr common.Address) (string, error) {
+	return _Tokenhub.Contract.GetBoundBep2Symbol(&_Tokenhub.CallOpts, contractAddr)
 }
 
-// RefundChannelSequence is a free data retrieval call binding the contract method 0x4e4a70e6.
+// GetBoundBep2Symbol is a free data retrieval call binding the contract method 0xfc1a598f.
 //
-// Solidity: function _refundChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) RefundChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.RefundChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getBoundBep2Symbol(address contractAddr) constant returns(string)
+func (_Tokenhub *TokenhubCallerSession) GetBoundBep2Symbol(contractAddr common.Address) (string, error) {
+	return _Tokenhub.Contract.GetBoundBep2Symbol(&_Tokenhub.CallOpts, contractAddr)
 }
 
-// TransferInChannelSequence is a free data retrieval call binding the contract method 0xdac3f64f.
+// GetBoundContract is a free data retrieval call binding the contract method 0x3d713223.
 //
-// Solidity: function _transferInChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) TransferInChannelSequence(opts *bind.CallOpts) (uint64, error) {
+// Solidity: function getBoundContract(string bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubCaller) GetBoundContract(opts *bind.CallOpts, bep2Symbol string) (common.Address, error) {
 	var (
-		ret0 = new(uint64)
+		ret0 = new(common.Address)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_transferInChannelSequence")
+	err := _Tokenhub.contract.Call(opts, out, "getBoundContract", bep2Symbol)
 	return *ret0, err
 }
 
-// TransferInChannelSequence is a free data retrieval call binding the contract method 0xdac3f64f.
+// GetBoundContract is a free data retrieval call binding the contract method 0x3d713223.
 //
-// Solidity: function _transferInChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) TransferInChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferInChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getBoundContract(string bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubSession) GetBoundContract(bep2Symbol string) (common.Address, error) {
+	return _Tokenhub.Contract.GetBoundContract(&_Tokenhub.CallOpts, bep2Symbol)
 }
 
-// TransferInChannelSequence is a free data retrieval call binding the contract method 0xdac3f64f.
+// GetBoundContract is a free data retrieval call binding the contract method 0x3d713223.
 //
-// Solidity: function _transferInChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) TransferInChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferInChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getBoundContract(string bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubCallerSession) GetBoundContract(bep2Symbol string) (common.Address, error) {
+	return _Tokenhub.Contract.GetBoundContract(&_Tokenhub.CallOpts, bep2Symbol)
 }
 
-// TransferInFailureChannelSequence is a free data retrieval call binding the contract method 0x5da9b1f2.
+// GetContractAddrByBEP2Symbol is a free data retrieval call binding the contract method 0x59b92789.
 //
-// Solidity: function _transferInFailureChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) TransferInFailureChannelSequence(opts *bind.CallOpts) (uint64, error) {
+// Solidity: function getContractAddrByBEP2Symbol(bytes32 bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubCaller) GetContractAddrByBEP2Symbol(opts *bind.CallOpts, bep2Symbol [32]byte) (common.Address, error) {
 	var (
-		ret0 = new(uint64)
+		ret0 = new(common.Address)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_transferInFailureChannelSequence")
+	err := _Tokenhub.contract.Call(opts, out, "getContractAddrByBEP2Symbol", bep2Symbol)
 	return *ret0, err
 }
 
-// TransferInFailureChannelSequence is a free data retrieval call binding the contract method 0x5da9b1f2.
+// GetContractAddrByBEP2Symbol is a free data retrieval call binding the contract method 0x59b92789.
 //
-// Solidity: function _transferInFailureChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) TransferInFailureChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferInFailureChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getContractAddrByBEP2Symbol(bytes32 bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubSession) GetContractAddrByBEP2Symbol(bep2Symbol [32]byte) (common.Address, error) {
+	return _Tokenhub.Contract.GetContractAddrByBEP2Symbol(&_Tokenhub.CallOpts, bep2Symbol)
 }
 
-// TransferInFailureChannelSequence is a free data retrieval call binding the contract method 0x5da9b1f2.
+// GetContractAddrByBEP2Symbol is a free data retrieval call binding the contract method 0x59b92789.
 //
-// Solidity: function _transferInFailureChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) TransferInFailureChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferInFailureChannelSequence(&_Tokenhub.CallOpts)
+// Solidity: function getContractAddrByBEP2Symbol(bytes32 bep2Symbol) constant returns(address)
+func (_Tokenhub *TokenhubCallerSession) GetContractAddrByBEP2Symbol(bep2Symbol [32]byte) (common.Address, error) {
+	return _Tokenhub.Contract.GetContractAddrByBEP2Symbol(&_Tokenhub.CallOpts, bep2Symbol)
 }
 
-// TransferOutChannelSequence is a free data retrieval call binding the contract method 0xbd038949.
+// GetMiniRelayFee is a free data retrieval call binding the contract method 0x149d14d9.
 //
-// Solidity: function _transferOutChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCaller) TransferOutChannelSequence(opts *bind.CallOpts) (uint64, error) {
-	var (
-		ret0 = new(uint64)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "_transferOutChannelSequence")
-	return *ret0, err
-}
-
-// TransferOutChannelSequence is a free data retrieval call binding the contract method 0xbd038949.
-//
-// Solidity: function _transferOutChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubSession) TransferOutChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferOutChannelSequence(&_Tokenhub.CallOpts)
-}
-
-// TransferOutChannelSequence is a free data retrieval call binding the contract method 0xbd038949.
-//
-// Solidity: function _transferOutChannelSequence() constant returns(uint64)
-func (_Tokenhub *TokenhubCallerSession) TransferOutChannelSequence() (uint64, error) {
-	return _Tokenhub.Contract.TransferOutChannelSequence(&_Tokenhub.CallOpts)
-}
-
-// Bep2TokenSymbolConvert is a free data retrieval call binding the contract method 0xe1063635.
-//
-// Solidity: function bep2TokenSymbolConvert(string symbol) constant returns(bytes32)
-func (_Tokenhub *TokenhubCaller) Bep2TokenSymbolConvert(opts *bind.CallOpts, symbol string) ([32]byte, error) {
-	var (
-		ret0 = new([32]byte)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "bep2TokenSymbolConvert", symbol)
-	return *ret0, err
-}
-
-// Bep2TokenSymbolConvert is a free data retrieval call binding the contract method 0xe1063635.
-//
-// Solidity: function bep2TokenSymbolConvert(string symbol) constant returns(bytes32)
-func (_Tokenhub *TokenhubSession) Bep2TokenSymbolConvert(symbol string) ([32]byte, error) {
-	return _Tokenhub.Contract.Bep2TokenSymbolConvert(&_Tokenhub.CallOpts, symbol)
-}
-
-// Bep2TokenSymbolConvert is a free data retrieval call binding the contract method 0xe1063635.
-//
-// Solidity: function bep2TokenSymbolConvert(string symbol) constant returns(bytes32)
-func (_Tokenhub *TokenhubCallerSession) Bep2TokenSymbolConvert(symbol string) ([32]byte, error) {
-	return _Tokenhub.Contract.Bep2TokenSymbolConvert(&_Tokenhub.CallOpts, symbol)
-}
-
-// CheckSymbol is a free data retrieval call binding the contract method 0xf5d31519.
-//
-// Solidity: function checkSymbol(string bep2eSymbol, bytes32 bep2TokenSymbol) constant returns(bool)
-func (_Tokenhub *TokenhubCaller) CheckSymbol(opts *bind.CallOpts, bep2eSymbol string, bep2TokenSymbol [32]byte) (bool, error) {
-	var (
-		ret0 = new(bool)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "checkSymbol", bep2eSymbol, bep2TokenSymbol)
-	return *ret0, err
-}
-
-// CheckSymbol is a free data retrieval call binding the contract method 0xf5d31519.
-//
-// Solidity: function checkSymbol(string bep2eSymbol, bytes32 bep2TokenSymbol) constant returns(bool)
-func (_Tokenhub *TokenhubSession) CheckSymbol(bep2eSymbol string, bep2TokenSymbol [32]byte) (bool, error) {
-	return _Tokenhub.Contract.CheckSymbol(&_Tokenhub.CallOpts, bep2eSymbol, bep2TokenSymbol)
-}
-
-// CheckSymbol is a free data retrieval call binding the contract method 0xf5d31519.
-//
-// Solidity: function checkSymbol(string bep2eSymbol, bytes32 bep2TokenSymbol) constant returns(bool)
-func (_Tokenhub *TokenhubCallerSession) CheckSymbol(bep2eSymbol string, bep2TokenSymbol [32]byte) (bool, error) {
-	return _Tokenhub.Contract.CheckSymbol(&_Tokenhub.CallOpts, bep2eSymbol, bep2TokenSymbol)
-}
-
-// ConvertToBep2Amount is a free data retrieval call binding the contract method 0xd398809b.
-//
-// Solidity: function convertToBep2Amount(uint256 amount, uint256 bep2eTokenDecimals) constant returns(uint256)
-func (_Tokenhub *TokenhubCaller) ConvertToBep2Amount(opts *bind.CallOpts, amount *big.Int, bep2eTokenDecimals *big.Int) (*big.Int, error) {
+// Solidity: function getMiniRelayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubCaller) GetMiniRelayFee(opts *bind.CallOpts) (*big.Int, error) {
 	var (
 		ret0 = new(*big.Int)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "convertToBep2Amount", amount, bep2eTokenDecimals)
+	err := _Tokenhub.contract.Call(opts, out, "getMiniRelayFee")
 	return *ret0, err
 }
 
-// ConvertToBep2Amount is a free data retrieval call binding the contract method 0xd398809b.
+// GetMiniRelayFee is a free data retrieval call binding the contract method 0x149d14d9.
 //
-// Solidity: function convertToBep2Amount(uint256 amount, uint256 bep2eTokenDecimals) constant returns(uint256)
-func (_Tokenhub *TokenhubSession) ConvertToBep2Amount(amount *big.Int, bep2eTokenDecimals *big.Int) (*big.Int, error) {
-	return _Tokenhub.Contract.ConvertToBep2Amount(&_Tokenhub.CallOpts, amount, bep2eTokenDecimals)
+// Solidity: function getMiniRelayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubSession) GetMiniRelayFee() (*big.Int, error) {
+	return _Tokenhub.Contract.GetMiniRelayFee(&_Tokenhub.CallOpts)
 }
 
-// ConvertToBep2Amount is a free data retrieval call binding the contract method 0xd398809b.
+// GetMiniRelayFee is a free data retrieval call binding the contract method 0x149d14d9.
 //
-// Solidity: function convertToBep2Amount(uint256 amount, uint256 bep2eTokenDecimals) constant returns(uint256)
-func (_Tokenhub *TokenhubCallerSession) ConvertToBep2Amount(amount *big.Int, bep2eTokenDecimals *big.Int) (*big.Int, error) {
-	return _Tokenhub.Contract.ConvertToBep2Amount(&_Tokenhub.CallOpts, amount, bep2eTokenDecimals)
+// Solidity: function getMiniRelayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubCallerSession) GetMiniRelayFee() (*big.Int, error) {
+	return _Tokenhub.Contract.GetMiniRelayFee(&_Tokenhub.CallOpts)
 }
 
-// MinimumRelayFee is a free data retrieval call binding the contract method 0xaae2768c.
+// RelayFee is a free data retrieval call binding the contract method 0x71d30863.
 //
-// Solidity: function minimumRelayFee() constant returns(uint256)
-func (_Tokenhub *TokenhubCaller) MinimumRelayFee(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function relayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubCaller) RelayFee(opts *bind.CallOpts) (*big.Int, error) {
 	var (
 		ret0 = new(*big.Int)
 	)
 	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "minimumRelayFee")
+	err := _Tokenhub.contract.Call(opts, out, "relayFee")
 	return *ret0, err
 }
 
-// MinimumRelayFee is a free data retrieval call binding the contract method 0xaae2768c.
+// RelayFee is a free data retrieval call binding the contract method 0x71d30863.
 //
-// Solidity: function minimumRelayFee() constant returns(uint256)
-func (_Tokenhub *TokenhubSession) MinimumRelayFee() (*big.Int, error) {
-	return _Tokenhub.Contract.MinimumRelayFee(&_Tokenhub.CallOpts)
+// Solidity: function relayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubSession) RelayFee() (*big.Int, error) {
+	return _Tokenhub.Contract.RelayFee(&_Tokenhub.CallOpts)
 }
 
-// MinimumRelayFee is a free data retrieval call binding the contract method 0xaae2768c.
+// RelayFee is a free data retrieval call binding the contract method 0x71d30863.
 //
-// Solidity: function minimumRelayFee() constant returns(uint256)
-func (_Tokenhub *TokenhubCallerSession) MinimumRelayFee() (*big.Int, error) {
-	return _Tokenhub.Contract.MinimumRelayFee(&_Tokenhub.CallOpts)
+// Solidity: function relayFee() constant returns(uint256)
+func (_Tokenhub *TokenhubCallerSession) RelayFee() (*big.Int, error) {
+	return _Tokenhub.Contract.RelayFee(&_Tokenhub.CallOpts)
 }
 
-// RefundRelayReward is a free data retrieval call binding the contract method 0x14e68d82.
+// BatchTransferOutBNB is a paid mutator transaction binding the contract method 0x6e056520.
 //
-// Solidity: function refundRelayReward() constant returns(uint256)
-func (_Tokenhub *TokenhubCaller) RefundRelayReward(opts *bind.CallOpts) (*big.Int, error) {
-	var (
-		ret0 = new(*big.Int)
-	)
-	out := ret0
-	err := _Tokenhub.contract.Call(opts, out, "refundRelayReward")
-	return *ret0, err
+// Solidity: function batchTransferOutBNB(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubTransactor) BatchTransferOutBNB(opts *bind.TransactOpts, recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "batchTransferOutBNB", recipientAddrs, amounts, refundAddrs, expireTime)
 }
 
-// RefundRelayReward is a free data retrieval call binding the contract method 0x14e68d82.
+// BatchTransferOutBNB is a paid mutator transaction binding the contract method 0x6e056520.
 //
-// Solidity: function refundRelayReward() constant returns(uint256)
-func (_Tokenhub *TokenhubSession) RefundRelayReward() (*big.Int, error) {
-	return _Tokenhub.Contract.RefundRelayReward(&_Tokenhub.CallOpts)
+// Solidity: function batchTransferOutBNB(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubSession) BatchTransferOutBNB(recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.Contract.BatchTransferOutBNB(&_Tokenhub.TransactOpts, recipientAddrs, amounts, refundAddrs, expireTime)
 }
 
-// RefundRelayReward is a free data retrieval call binding the contract method 0x14e68d82.
+// BatchTransferOutBNB is a paid mutator transaction binding the contract method 0x6e056520.
 //
-// Solidity: function refundRelayReward() constant returns(uint256)
-func (_Tokenhub *TokenhubCallerSession) RefundRelayReward() (*big.Int, error) {
-	return _Tokenhub.Contract.RefundRelayReward(&_Tokenhub.CallOpts)
+// Solidity: function batchTransferOutBNB(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubTransactorSession) BatchTransferOutBNB(recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.Contract.BatchTransferOutBNB(&_Tokenhub.TransactOpts, recipientAddrs, amounts, refundAddrs, expireTime)
 }
 
-// ApproveBind is a paid mutator transaction binding the contract method 0x6b3f1307.
+// BindToken is a paid mutator transaction binding the contract method 0x8eff336c.
 //
-// Solidity: function approveBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactor) ApproveBind(opts *bind.TransactOpts, contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "approveBind", contractAddr, bep2Symbol)
+// Solidity: function bindToken(bytes32 bep2Symbol, address contractAddr, uint256 decimals) returns()
+func (_Tokenhub *TokenhubTransactor) BindToken(opts *bind.TransactOpts, bep2Symbol [32]byte, contractAddr common.Address, decimals *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "bindToken", bep2Symbol, contractAddr, decimals)
 }
 
-// ApproveBind is a paid mutator transaction binding the contract method 0x6b3f1307.
+// BindToken is a paid mutator transaction binding the contract method 0x8eff336c.
 //
-// Solidity: function approveBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubSession) ApproveBind(contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.ApproveBind(&_Tokenhub.TransactOpts, contractAddr, bep2Symbol)
+// Solidity: function bindToken(bytes32 bep2Symbol, address contractAddr, uint256 decimals) returns()
+func (_Tokenhub *TokenhubSession) BindToken(bep2Symbol [32]byte, contractAddr common.Address, decimals *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.Contract.BindToken(&_Tokenhub.TransactOpts, bep2Symbol, contractAddr, decimals)
 }
 
-// ApproveBind is a paid mutator transaction binding the contract method 0x6b3f1307.
+// BindToken is a paid mutator transaction binding the contract method 0x8eff336c.
 //
-// Solidity: function approveBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) ApproveBind(contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.ApproveBind(&_Tokenhub.TransactOpts, contractAddr, bep2Symbol)
+// Solidity: function bindToken(bytes32 bep2Symbol, address contractAddr, uint256 decimals) returns()
+func (_Tokenhub *TokenhubTransactorSession) BindToken(bep2Symbol [32]byte, contractAddr common.Address, decimals *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.Contract.BindToken(&_Tokenhub.TransactOpts, bep2Symbol, contractAddr, decimals)
 }
 
-// BatchTransferOut is a paid mutator transaction binding the contract method 0x053799cf.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchTransferOut(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, address contractAddr, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubTransactor) BatchTransferOut(opts *bind.TransactOpts, recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, contractAddr common.Address, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "batchTransferOut", recipientAddrs, amounts, refundAddrs, contractAddr, expireTime, relayFee)
+// Solidity: function claimRewards(address to, uint256 amount) returns(uint256)
+func (_Tokenhub *TokenhubTransactor) ClaimRewards(opts *bind.TransactOpts, to common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "claimRewards", to, amount)
 }
 
-// BatchTransferOut is a paid mutator transaction binding the contract method 0x053799cf.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchTransferOut(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, address contractAddr, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubSession) BatchTransferOut(recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, contractAddr common.Address, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.Contract.BatchTransferOut(&_Tokenhub.TransactOpts, recipientAddrs, amounts, refundAddrs, contractAddr, expireTime, relayFee)
+// Solidity: function claimRewards(address to, uint256 amount) returns(uint256)
+func (_Tokenhub *TokenhubSession) ClaimRewards(to common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.Contract.ClaimRewards(&_Tokenhub.TransactOpts, to, amount)
 }
 
-// BatchTransferOut is a paid mutator transaction binding the contract method 0x053799cf.
+// ClaimRewards is a paid mutator transaction binding the contract method 0x9a99b4f0.
 //
-// Solidity: function batchTransferOut(address[] recipientAddrs, uint256[] amounts, address[] refundAddrs, address contractAddr, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) BatchTransferOut(recipientAddrs []common.Address, amounts []*big.Int, refundAddrs []common.Address, contractAddr common.Address, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.Contract.BatchTransferOut(&_Tokenhub.TransactOpts, recipientAddrs, amounts, refundAddrs, contractAddr, expireTime, relayFee)
+// Solidity: function claimRewards(address to, uint256 amount) returns(uint256)
+func (_Tokenhub *TokenhubTransactorSession) ClaimRewards(to common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _Tokenhub.Contract.ClaimRewards(&_Tokenhub.TransactOpts, to, amount)
 }
 
-// ExpireBind is a paid mutator transaction binding the contract method 0x72c4e086.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function expireBind(string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactor) ExpireBind(opts *bind.TransactOpts, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "expireBind", bep2Symbol)
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubTransactor) HandleAckPackage(opts *bind.TransactOpts, channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "handleAckPackage", channelId, msgBytes)
 }
 
-// ExpireBind is a paid mutator transaction binding the contract method 0x72c4e086.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function expireBind(string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubSession) ExpireBind(bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.ExpireBind(&_Tokenhub.TransactOpts, bep2Symbol)
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubSession) HandleAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleAckPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// ExpireBind is a paid mutator transaction binding the contract method 0x72c4e086.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function expireBind(string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) ExpireBind(bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.ExpireBind(&_Tokenhub.TransactOpts, bep2Symbol)
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubTransactorSession) HandleAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleAckPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// HandleBindPackage is a paid mutator transaction binding the contract method 0x2eb881b0.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function handleBindPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactor) HandleBindPackage(opts *bind.TransactOpts, msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "handleBindPackage", msgBytes, proof, height, packageSequence)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubTransactor) HandleFailAckPackage(opts *bind.TransactOpts, channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "handleFailAckPackage", channelId, msgBytes)
 }
 
-// HandleBindPackage is a paid mutator transaction binding the contract method 0x2eb881b0.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function handleBindPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubSession) HandleBindPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleBindPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubSession) HandleFailAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleFailAckPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// HandleBindPackage is a paid mutator transaction binding the contract method 0x2eb881b0.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function handleBindPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) HandleBindPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleBindPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Tokenhub *TokenhubTransactorSession) HandleFailAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleFailAckPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// HandleRefundPackage is a paid mutator transaction binding the contract method 0xccb27f6a.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function handleRefundPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactor) HandleRefundPackage(opts *bind.TransactOpts, msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "handleRefundPackage", msgBytes, proof, height, packageSequence)
+// Solidity: function handleSynPackage(uint8 channelId, bytes msgBytes) returns(bytes)
+func (_Tokenhub *TokenhubTransactor) HandleSynPackage(opts *bind.TransactOpts, channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "handleSynPackage", channelId, msgBytes)
 }
 
-// HandleRefundPackage is a paid mutator transaction binding the contract method 0xccb27f6a.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function handleRefundPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubSession) HandleRefundPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleRefundPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function handleSynPackage(uint8 channelId, bytes msgBytes) returns(bytes)
+func (_Tokenhub *TokenhubSession) HandleSynPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleSynPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// HandleRefundPackage is a paid mutator transaction binding the contract method 0xccb27f6a.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function handleRefundPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) HandleRefundPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleRefundPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function handleSynPackage(uint8 channelId, bytes msgBytes) returns(bytes)
+func (_Tokenhub *TokenhubTransactorSession) HandleSynPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.HandleSynPackage(&_Tokenhub.TransactOpts, channelId, msgBytes)
 }
 
-// HandleTransferInPackage is a paid mutator transaction binding the contract method 0x964c0dcd.
+// Init is a paid mutator transaction binding the contract method 0xe1c7392a.
 //
-// Solidity: function handleTransferInPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactor) HandleTransferInPackage(opts *bind.TransactOpts, msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "handleTransferInPackage", msgBytes, proof, height, packageSequence)
+// Solidity: function init() returns()
+func (_Tokenhub *TokenhubTransactor) Init(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "init")
 }
 
-// HandleTransferInPackage is a paid mutator transaction binding the contract method 0x964c0dcd.
+// Init is a paid mutator transaction binding the contract method 0xe1c7392a.
 //
-// Solidity: function handleTransferInPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubSession) HandleTransferInPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleTransferInPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function init() returns()
+func (_Tokenhub *TokenhubSession) Init() (*types.Transaction, error) {
+	return _Tokenhub.Contract.Init(&_Tokenhub.TransactOpts)
 }
 
-// HandleTransferInPackage is a paid mutator transaction binding the contract method 0x964c0dcd.
+// Init is a paid mutator transaction binding the contract method 0xe1c7392a.
 //
-// Solidity: function handleTransferInPackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) HandleTransferInPackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Tokenhub.Contract.HandleTransferInPackage(&_Tokenhub.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function init() returns()
+func (_Tokenhub *TokenhubTransactorSession) Init() (*types.Transaction, error) {
+	return _Tokenhub.Contract.Init(&_Tokenhub.TransactOpts)
 }
 
-// RejectBind is a paid mutator transaction binding the contract method 0x77d9dae8.
+// TransferOut is a paid mutator transaction binding the contract method 0xaa7415f5.
 //
-// Solidity: function rejectBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactor) RejectBind(opts *bind.TransactOpts, contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "rejectBind", contractAddr, bep2Symbol)
+// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubTransactor) TransferOut(opts *bind.TransactOpts, contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "transferOut", contractAddr, recipient, amount, expireTime)
 }
 
-// RejectBind is a paid mutator transaction binding the contract method 0x77d9dae8.
+// TransferOut is a paid mutator transaction binding the contract method 0xaa7415f5.
 //
-// Solidity: function rejectBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubSession) RejectBind(contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.RejectBind(&_Tokenhub.TransactOpts, contractAddr, bep2Symbol)
+// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubSession) TransferOut(contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.Contract.TransferOut(&_Tokenhub.TransactOpts, contractAddr, recipient, amount, expireTime)
 }
 
-// RejectBind is a paid mutator transaction binding the contract method 0x77d9dae8.
+// TransferOut is a paid mutator transaction binding the contract method 0xaa7415f5.
 //
-// Solidity: function rejectBind(address contractAddr, string bep2Symbol) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) RejectBind(contractAddr common.Address, bep2Symbol string) (*types.Transaction, error) {
-	return _Tokenhub.Contract.RejectBind(&_Tokenhub.TransactOpts, contractAddr, bep2Symbol)
+// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint64 expireTime) returns(bool)
+func (_Tokenhub *TokenhubTransactorSession) TransferOut(contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime uint64) (*types.Transaction, error) {
+	return _Tokenhub.Contract.TransferOut(&_Tokenhub.TransactOpts, contractAddr, recipient, amount, expireTime)
 }
 
-// TransferOut is a paid mutator transaction binding the contract method 0xd43b8c5b.
+// UnbindToken is a paid mutator transaction binding the contract method 0xb99328c5.
 //
-// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubTransactor) TransferOut(opts *bind.TransactOpts, contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.contract.Transact(opts, "transferOut", contractAddr, recipient, amount, expireTime, relayFee)
+// Solidity: function unbindToken(bytes32 bep2Symbol, address contractAddr) returns()
+func (_Tokenhub *TokenhubTransactor) UnbindToken(opts *bind.TransactOpts, bep2Symbol [32]byte, contractAddr common.Address) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "unbindToken", bep2Symbol, contractAddr)
 }
 
-// TransferOut is a paid mutator transaction binding the contract method 0xd43b8c5b.
+// UnbindToken is a paid mutator transaction binding the contract method 0xb99328c5.
 //
-// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubSession) TransferOut(contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.Contract.TransferOut(&_Tokenhub.TransactOpts, contractAddr, recipient, amount, expireTime, relayFee)
+// Solidity: function unbindToken(bytes32 bep2Symbol, address contractAddr) returns()
+func (_Tokenhub *TokenhubSession) UnbindToken(bep2Symbol [32]byte, contractAddr common.Address) (*types.Transaction, error) {
+	return _Tokenhub.Contract.UnbindToken(&_Tokenhub.TransactOpts, bep2Symbol, contractAddr)
 }
 
-// TransferOut is a paid mutator transaction binding the contract method 0xd43b8c5b.
+// UnbindToken is a paid mutator transaction binding the contract method 0xb99328c5.
 //
-// Solidity: function transferOut(address contractAddr, address recipient, uint256 amount, uint256 expireTime, uint256 relayFee) returns(bool)
-func (_Tokenhub *TokenhubTransactorSession) TransferOut(contractAddr common.Address, recipient common.Address, amount *big.Int, expireTime *big.Int, relayFee *big.Int) (*types.Transaction, error) {
-	return _Tokenhub.Contract.TransferOut(&_Tokenhub.TransactOpts, contractAddr, recipient, amount, expireTime, relayFee)
+// Solidity: function unbindToken(bytes32 bep2Symbol, address contractAddr) returns()
+func (_Tokenhub *TokenhubTransactorSession) UnbindToken(bep2Symbol [32]byte, contractAddr common.Address) (*types.Transaction, error) {
+	return _Tokenhub.Contract.UnbindToken(&_Tokenhub.TransactOpts, bep2Symbol, contractAddr)
 }
 
-// TokenhubLogBatchTransferOutIterator is returned from FilterLogBatchTransferOut and is used to iterate over the raw logs and unpacked data for LogBatchTransferOut events raised by the Tokenhub contract.
-type TokenhubLogBatchTransferOutIterator struct {
-	Event *TokenhubLogBatchTransferOut // Event containing the contract specifics and raw log
+// UpdateParam is a paid mutator transaction binding the contract method 0xac431751.
+//
+// Solidity: function updateParam(string key, bytes value) returns()
+func (_Tokenhub *TokenhubTransactor) UpdateParam(opts *bind.TransactOpts, key string, value []byte) (*types.Transaction, error) {
+	return _Tokenhub.contract.Transact(opts, "updateParam", key, value)
+}
+
+// UpdateParam is a paid mutator transaction binding the contract method 0xac431751.
+//
+// Solidity: function updateParam(string key, bytes value) returns()
+func (_Tokenhub *TokenhubSession) UpdateParam(key string, value []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.UpdateParam(&_Tokenhub.TransactOpts, key, value)
+}
+
+// UpdateParam is a paid mutator transaction binding the contract method 0xac431751.
+//
+// Solidity: function updateParam(string key, bytes value) returns()
+func (_Tokenhub *TokenhubTransactorSession) UpdateParam(key string, value []byte) (*types.Transaction, error) {
+	return _Tokenhub.Contract.UpdateParam(&_Tokenhub.TransactOpts, key, value)
+}
+
+// TokenhubParamChangeIterator is returned from FilterParamChange and is used to iterate over the raw logs and unpacked data for ParamChange events raised by the Tokenhub contract.
+type TokenhubParamChangeIterator struct {
+	Event *TokenhubParamChange // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1244,7 +1438,7 @@ type TokenhubLogBatchTransferOutIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBatchTransferOutIterator) Next() bool {
+func (it *TokenhubParamChangeIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1253,7 +1447,7 @@ func (it *TokenhubLogBatchTransferOutIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBatchTransferOut)
+			it.Event = new(TokenhubParamChange)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1268,7 +1462,7 @@ func (it *TokenhubLogBatchTransferOutIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBatchTransferOut)
+		it.Event = new(TokenhubParamChange)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1284,46 +1478,42 @@ func (it *TokenhubLogBatchTransferOutIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBatchTransferOutIterator) Error() error {
+func (it *TokenhubParamChangeIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBatchTransferOutIterator) Close() error {
+func (it *TokenhubParamChangeIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBatchTransferOut represents a LogBatchTransferOut event raised by the Tokenhub contract.
-type TokenhubLogBatchTransferOut struct {
-	Sequence        *big.Int
-	Amounts         []*big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	ExpireTime      *big.Int
-	RelayFee        *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubParamChange represents a ParamChange event raised by the Tokenhub contract.
+type TokenhubParamChange struct {
+	Key   string
+	Value []byte
+	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBatchTransferOut is a free log retrieval operation binding the contract event 0x00a18f0343865824d1375c23f5dd79fdf32a12f50400ef2591e52276f8378e31.
+// FilterParamChange is a free log retrieval operation binding the contract event 0x6cdb0ac70ab7f2e2d035cca5be60d89906f2dede7648ddbd7402189c1eeed17a.
 //
-// Solidity: event LogBatchTransferOut(uint256 sequence, uint256[] amounts, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) FilterLogBatchTransferOut(opts *bind.FilterOpts) (*TokenhubLogBatchTransferOutIterator, error) {
+// Solidity: event paramChange(string key, bytes value)
+func (_Tokenhub *TokenhubFilterer) FilterParamChange(opts *bind.FilterOpts) (*TokenhubParamChangeIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBatchTransferOut")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "paramChange")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBatchTransferOutIterator{contract: _Tokenhub.contract, event: "LogBatchTransferOut", logs: logs, sub: sub}, nil
+	return &TokenhubParamChangeIterator{contract: _Tokenhub.contract, event: "paramChange", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBatchTransferOut is a free log subscription operation binding the contract event 0x00a18f0343865824d1375c23f5dd79fdf32a12f50400ef2591e52276f8378e31.
+// WatchParamChange is a free log subscription operation binding the contract event 0x6cdb0ac70ab7f2e2d035cca5be60d89906f2dede7648ddbd7402189c1eeed17a.
 //
-// Solidity: event LogBatchTransferOut(uint256 sequence, uint256[] amounts, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOut(opts *bind.WatchOpts, sink chan<- *TokenhubLogBatchTransferOut) (event.Subscription, error) {
+// Solidity: event paramChange(string key, bytes value)
+func (_Tokenhub *TokenhubFilterer) WatchParamChange(opts *bind.WatchOpts, sink chan<- *TokenhubParamChange) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBatchTransferOut")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "paramChange")
 	if err != nil {
 		return nil, err
 	}
@@ -1333,8 +1523,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOut(opts *bind.WatchOpts
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBatchTransferOut)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBatchTransferOut", log); err != nil {
+				event := new(TokenhubParamChange)
+				if err := _Tokenhub.contract.UnpackLog(event, "paramChange", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1355,20 +1545,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOut(opts *bind.WatchOpts
 	}), nil
 }
 
-// ParseLogBatchTransferOut is a log parse operation binding the contract event 0x00a18f0343865824d1375c23f5dd79fdf32a12f50400ef2591e52276f8378e31.
+// ParseParamChange is a log parse operation binding the contract event 0x6cdb0ac70ab7f2e2d035cca5be60d89906f2dede7648ddbd7402189c1eeed17a.
 //
-// Solidity: event LogBatchTransferOut(uint256 sequence, uint256[] amounts, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) ParseLogBatchTransferOut(log types.Log) (*TokenhubLogBatchTransferOut, error) {
-	event := new(TokenhubLogBatchTransferOut)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBatchTransferOut", log); err != nil {
+// Solidity: event paramChange(string key, bytes value)
+func (_Tokenhub *TokenhubFilterer) ParseParamChange(log types.Log) (*TokenhubParamChange, error) {
+	event := new(TokenhubParamChange)
+	if err := _Tokenhub.contract.UnpackLog(event, "paramChange", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBatchTransferOutAddrsIterator is returned from FilterLogBatchTransferOutAddrs and is used to iterate over the raw logs and unpacked data for LogBatchTransferOutAddrs events raised by the Tokenhub contract.
-type TokenhubLogBatchTransferOutAddrsIterator struct {
-	Event *TokenhubLogBatchTransferOutAddrs // Event containing the contract specifics and raw log
+// TokenhubReceiveDepositIterator is returned from FilterReceiveDeposit and is used to iterate over the raw logs and unpacked data for ReceiveDeposit events raised by the Tokenhub contract.
+type TokenhubReceiveDepositIterator struct {
+	Event *TokenhubReceiveDeposit // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1382,7 +1572,7 @@ type TokenhubLogBatchTransferOutAddrsIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBatchTransferOutAddrsIterator) Next() bool {
+func (it *TokenhubReceiveDepositIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1391,7 +1581,7 @@ func (it *TokenhubLogBatchTransferOutAddrsIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBatchTransferOutAddrs)
+			it.Event = new(TokenhubReceiveDeposit)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1406,7 +1596,7 @@ func (it *TokenhubLogBatchTransferOutAddrsIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBatchTransferOutAddrs)
+		it.Event = new(TokenhubReceiveDeposit)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1422,43 +1612,42 @@ func (it *TokenhubLogBatchTransferOutAddrsIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBatchTransferOutAddrsIterator) Error() error {
+func (it *TokenhubReceiveDepositIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBatchTransferOutAddrsIterator) Close() error {
+func (it *TokenhubReceiveDepositIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBatchTransferOutAddrs represents a LogBatchTransferOutAddrs event raised by the Tokenhub contract.
-type TokenhubLogBatchTransferOutAddrs struct {
-	Sequence       *big.Int
-	RecipientAddrs []common.Address
-	RefundAddrs    []common.Address
-	Raw            types.Log // Blockchain specific contextual infos
+// TokenhubReceiveDeposit represents a ReceiveDeposit event raised by the Tokenhub contract.
+type TokenhubReceiveDeposit struct {
+	From   common.Address
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBatchTransferOutAddrs is a free log retrieval operation binding the contract event 0x8740bbd4e1a2505bf2908481adbf1056fb52f762152b702f6c65468f63c55cf8.
+// FilterReceiveDeposit is a free log retrieval operation binding the contract event 0x6c98249d85d88c3753a04a22230f595e4dc8d3dc86c34af35deeeedc861b89db.
 //
-// Solidity: event LogBatchTransferOutAddrs(uint256 sequence, address[] recipientAddrs, address[] refundAddrs)
-func (_Tokenhub *TokenhubFilterer) FilterLogBatchTransferOutAddrs(opts *bind.FilterOpts) (*TokenhubLogBatchTransferOutAddrsIterator, error) {
+// Solidity: event receiveDeposit(address from, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) FilterReceiveDeposit(opts *bind.FilterOpts) (*TokenhubReceiveDepositIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBatchTransferOutAddrs")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "receiveDeposit")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBatchTransferOutAddrsIterator{contract: _Tokenhub.contract, event: "LogBatchTransferOutAddrs", logs: logs, sub: sub}, nil
+	return &TokenhubReceiveDepositIterator{contract: _Tokenhub.contract, event: "receiveDeposit", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBatchTransferOutAddrs is a free log subscription operation binding the contract event 0x8740bbd4e1a2505bf2908481adbf1056fb52f762152b702f6c65468f63c55cf8.
+// WatchReceiveDeposit is a free log subscription operation binding the contract event 0x6c98249d85d88c3753a04a22230f595e4dc8d3dc86c34af35deeeedc861b89db.
 //
-// Solidity: event LogBatchTransferOutAddrs(uint256 sequence, address[] recipientAddrs, address[] refundAddrs)
-func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOutAddrs(opts *bind.WatchOpts, sink chan<- *TokenhubLogBatchTransferOutAddrs) (event.Subscription, error) {
+// Solidity: event receiveDeposit(address from, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) WatchReceiveDeposit(opts *bind.WatchOpts, sink chan<- *TokenhubReceiveDeposit) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBatchTransferOutAddrs")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "receiveDeposit")
 	if err != nil {
 		return nil, err
 	}
@@ -1468,8 +1657,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOutAddrs(opts *bind.Watc
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBatchTransferOutAddrs)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBatchTransferOutAddrs", log); err != nil {
+				event := new(TokenhubReceiveDeposit)
+				if err := _Tokenhub.contract.UnpackLog(event, "receiveDeposit", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1490,20 +1679,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBatchTransferOutAddrs(opts *bind.Watc
 	}), nil
 }
 
-// ParseLogBatchTransferOutAddrs is a log parse operation binding the contract event 0x8740bbd4e1a2505bf2908481adbf1056fb52f762152b702f6c65468f63c55cf8.
+// ParseReceiveDeposit is a log parse operation binding the contract event 0x6c98249d85d88c3753a04a22230f595e4dc8d3dc86c34af35deeeedc861b89db.
 //
-// Solidity: event LogBatchTransferOutAddrs(uint256 sequence, address[] recipientAddrs, address[] refundAddrs)
-func (_Tokenhub *TokenhubFilterer) ParseLogBatchTransferOutAddrs(log types.Log) (*TokenhubLogBatchTransferOutAddrs, error) {
-	event := new(TokenhubLogBatchTransferOutAddrs)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBatchTransferOutAddrs", log); err != nil {
+// Solidity: event receiveDeposit(address from, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) ParseReceiveDeposit(log types.Log) (*TokenhubReceiveDeposit, error) {
+	event := new(TokenhubReceiveDeposit)
+	if err := _Tokenhub.contract.UnpackLog(event, "receiveDeposit", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBindInvalidParameterIterator is returned from FilterLogBindInvalidParameter and is used to iterate over the raw logs and unpacked data for LogBindInvalidParameter events raised by the Tokenhub contract.
-type TokenhubLogBindInvalidParameterIterator struct {
-	Event *TokenhubLogBindInvalidParameter // Event containing the contract specifics and raw log
+// TokenhubRefundFailureIterator is returned from FilterRefundFailure and is used to iterate over the raw logs and unpacked data for RefundFailure events raised by the Tokenhub contract.
+type TokenhubRefundFailureIterator struct {
+	Event *TokenhubRefundFailure // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1517,7 +1706,7 @@ type TokenhubLogBindInvalidParameterIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBindInvalidParameterIterator) Next() bool {
+func (it *TokenhubRefundFailureIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1526,7 +1715,7 @@ func (it *TokenhubLogBindInvalidParameterIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBindInvalidParameter)
+			it.Event = new(TokenhubRefundFailure)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1541,7 +1730,7 @@ func (it *TokenhubLogBindInvalidParameterIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBindInvalidParameter)
+		it.Event = new(TokenhubRefundFailure)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1557,43 +1746,44 @@ func (it *TokenhubLogBindInvalidParameterIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBindInvalidParameterIterator) Error() error {
+func (it *TokenhubRefundFailureIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBindInvalidParameterIterator) Close() error {
+func (it *TokenhubRefundFailureIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBindInvalidParameter represents a LogBindInvalidParameter event raised by the Tokenhub contract.
-type TokenhubLogBindInvalidParameter struct {
-	Sequence        *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubRefundFailure represents a RefundFailure event raised by the Tokenhub contract.
+type TokenhubRefundFailure struct {
+	Bep2eAddr  common.Address
+	RefundAddr common.Address
+	Amount     *big.Int
+	Status     uint32
+	Raw        types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBindInvalidParameter is a free log retrieval operation binding the contract event 0x2117f993c9cc877c531b4e6bd55d822cb48b529fd003c80e5bd6c27b7c1c1702.
+// FilterRefundFailure is a free log retrieval operation binding the contract event 0x203f9f67a785f4f81be4d48b109aa0c498d1bc8097ecc2627063f480cc5fe73e.
 //
-// Solidity: event LogBindInvalidParameter(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) FilterLogBindInvalidParameter(opts *bind.FilterOpts) (*TokenhubLogBindInvalidParameterIterator, error) {
+// Solidity: event refundFailure(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) FilterRefundFailure(opts *bind.FilterOpts) (*TokenhubRefundFailureIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBindInvalidParameter")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "refundFailure")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBindInvalidParameterIterator{contract: _Tokenhub.contract, event: "LogBindInvalidParameter", logs: logs, sub: sub}, nil
+	return &TokenhubRefundFailureIterator{contract: _Tokenhub.contract, event: "refundFailure", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBindInvalidParameter is a free log subscription operation binding the contract event 0x2117f993c9cc877c531b4e6bd55d822cb48b529fd003c80e5bd6c27b7c1c1702.
+// WatchRefundFailure is a free log subscription operation binding the contract event 0x203f9f67a785f4f81be4d48b109aa0c498d1bc8097ecc2627063f480cc5fe73e.
 //
-// Solidity: event LogBindInvalidParameter(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) WatchLogBindInvalidParameter(opts *bind.WatchOpts, sink chan<- *TokenhubLogBindInvalidParameter) (event.Subscription, error) {
+// Solidity: event refundFailure(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) WatchRefundFailure(opts *bind.WatchOpts, sink chan<- *TokenhubRefundFailure) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBindInvalidParameter")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "refundFailure")
 	if err != nil {
 		return nil, err
 	}
@@ -1603,8 +1793,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindInvalidParameter(opts *bind.Watch
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBindInvalidParameter)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBindInvalidParameter", log); err != nil {
+				event := new(TokenhubRefundFailure)
+				if err := _Tokenhub.contract.UnpackLog(event, "refundFailure", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1625,20 +1815,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindInvalidParameter(opts *bind.Watch
 	}), nil
 }
 
-// ParseLogBindInvalidParameter is a log parse operation binding the contract event 0x2117f993c9cc877c531b4e6bd55d822cb48b529fd003c80e5bd6c27b7c1c1702.
+// ParseRefundFailure is a log parse operation binding the contract event 0x203f9f67a785f4f81be4d48b109aa0c498d1bc8097ecc2627063f480cc5fe73e.
 //
-// Solidity: event LogBindInvalidParameter(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) ParseLogBindInvalidParameter(log types.Log) (*TokenhubLogBindInvalidParameter, error) {
-	event := new(TokenhubLogBindInvalidParameter)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBindInvalidParameter", log); err != nil {
+// Solidity: event refundFailure(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) ParseRefundFailure(log types.Log) (*TokenhubRefundFailure, error) {
+	event := new(TokenhubRefundFailure)
+	if err := _Tokenhub.contract.UnpackLog(event, "refundFailure", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBindRejectedIterator is returned from FilterLogBindRejected and is used to iterate over the raw logs and unpacked data for LogBindRejected events raised by the Tokenhub contract.
-type TokenhubLogBindRejectedIterator struct {
-	Event *TokenhubLogBindRejected // Event containing the contract specifics and raw log
+// TokenhubRefundSuccessIterator is returned from FilterRefundSuccess and is used to iterate over the raw logs and unpacked data for RefundSuccess events raised by the Tokenhub contract.
+type TokenhubRefundSuccessIterator struct {
+	Event *TokenhubRefundSuccess // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1652,7 +1842,7 @@ type TokenhubLogBindRejectedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBindRejectedIterator) Next() bool {
+func (it *TokenhubRefundSuccessIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1661,7 +1851,7 @@ func (it *TokenhubLogBindRejectedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBindRejected)
+			it.Event = new(TokenhubRefundSuccess)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1676,7 +1866,7 @@ func (it *TokenhubLogBindRejectedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBindRejected)
+		it.Event = new(TokenhubRefundSuccess)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1692,43 +1882,44 @@ func (it *TokenhubLogBindRejectedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBindRejectedIterator) Error() error {
+func (it *TokenhubRefundSuccessIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBindRejectedIterator) Close() error {
+func (it *TokenhubRefundSuccessIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBindRejected represents a LogBindRejected event raised by the Tokenhub contract.
-type TokenhubLogBindRejected struct {
-	Sequence        *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubRefundSuccess represents a RefundSuccess event raised by the Tokenhub contract.
+type TokenhubRefundSuccess struct {
+	Bep2eAddr  common.Address
+	RefundAddr common.Address
+	Amount     *big.Int
+	Status     uint32
+	Raw        types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBindRejected is a free log retrieval operation binding the contract event 0x341e20b0b6b62cb3990e2d1f8bcb0a15e7d7fd446355a7be807face162285254.
+// FilterRefundSuccess is a free log retrieval operation binding the contract event 0xd468d4fa5e8fb4adc119b29a983fd0785e04af5cb8b7a3a69a47270c54b6901a.
 //
-// Solidity: event LogBindRejected(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) FilterLogBindRejected(opts *bind.FilterOpts) (*TokenhubLogBindRejectedIterator, error) {
+// Solidity: event refundSuccess(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) FilterRefundSuccess(opts *bind.FilterOpts) (*TokenhubRefundSuccessIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBindRejected")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "refundSuccess")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBindRejectedIterator{contract: _Tokenhub.contract, event: "LogBindRejected", logs: logs, sub: sub}, nil
+	return &TokenhubRefundSuccessIterator{contract: _Tokenhub.contract, event: "refundSuccess", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBindRejected is a free log subscription operation binding the contract event 0x341e20b0b6b62cb3990e2d1f8bcb0a15e7d7fd446355a7be807face162285254.
+// WatchRefundSuccess is a free log subscription operation binding the contract event 0xd468d4fa5e8fb4adc119b29a983fd0785e04af5cb8b7a3a69a47270c54b6901a.
 //
-// Solidity: event LogBindRejected(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) WatchLogBindRejected(opts *bind.WatchOpts, sink chan<- *TokenhubLogBindRejected) (event.Subscription, error) {
+// Solidity: event refundSuccess(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) WatchRefundSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubRefundSuccess) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBindRejected")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "refundSuccess")
 	if err != nil {
 		return nil, err
 	}
@@ -1738,8 +1929,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindRejected(opts *bind.WatchOpts, si
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBindRejected)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBindRejected", log); err != nil {
+				event := new(TokenhubRefundSuccess)
+				if err := _Tokenhub.contract.UnpackLog(event, "refundSuccess", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1760,20 +1951,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindRejected(opts *bind.WatchOpts, si
 	}), nil
 }
 
-// ParseLogBindRejected is a log parse operation binding the contract event 0x341e20b0b6b62cb3990e2d1f8bcb0a15e7d7fd446355a7be807face162285254.
+// ParseRefundSuccess is a log parse operation binding the contract event 0xd468d4fa5e8fb4adc119b29a983fd0785e04af5cb8b7a3a69a47270c54b6901a.
 //
-// Solidity: event LogBindRejected(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) ParseLogBindRejected(log types.Log) (*TokenhubLogBindRejected, error) {
-	event := new(TokenhubLogBindRejected)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBindRejected", log); err != nil {
+// Solidity: event refundSuccess(address bep2eAddr, address refundAddr, uint256 amount, uint32 status)
+func (_Tokenhub *TokenhubFilterer) ParseRefundSuccess(log types.Log) (*TokenhubRefundSuccess, error) {
+	event := new(TokenhubRefundSuccess)
+	if err := _Tokenhub.contract.UnpackLog(event, "refundSuccess", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBindRequestIterator is returned from FilterLogBindRequest and is used to iterate over the raw logs and unpacked data for LogBindRequest events raised by the Tokenhub contract.
-type TokenhubLogBindRequestIterator struct {
-	Event *TokenhubLogBindRequest // Event containing the contract specifics and raw log
+// TokenhubRewardToIterator is returned from FilterRewardTo and is used to iterate over the raw logs and unpacked data for RewardTo events raised by the Tokenhub contract.
+type TokenhubRewardToIterator struct {
+	Event *TokenhubRewardTo // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1787,7 +1978,7 @@ type TokenhubLogBindRequestIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBindRequestIterator) Next() bool {
+func (it *TokenhubRewardToIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1796,7 +1987,7 @@ func (it *TokenhubLogBindRequestIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBindRequest)
+			it.Event = new(TokenhubRewardTo)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1811,7 +2002,7 @@ func (it *TokenhubLogBindRequestIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBindRequest)
+		it.Event = new(TokenhubRewardTo)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1827,44 +2018,42 @@ func (it *TokenhubLogBindRequestIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBindRequestIterator) Error() error {
+func (it *TokenhubRewardToIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBindRequestIterator) Close() error {
+func (it *TokenhubRewardToIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBindRequest represents a LogBindRequest event raised by the Tokenhub contract.
-type TokenhubLogBindRequest struct {
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	TotalSupply     *big.Int
-	PeggyAmount     *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubRewardTo represents a RewardTo event raised by the Tokenhub contract.
+type TokenhubRewardTo struct {
+	To     common.Address
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBindRequest is a free log retrieval operation binding the contract event 0xf8608cf3c27350e6aa0beaa6723ea6911e3d7353e8b22a69bb112c15f93867ca.
+// FilterRewardTo is a free log retrieval operation binding the contract event 0xf8b71c64315fc33b2ead2adfa487955065152a8ac33d9d5193aafd7f45dc15a0.
 //
-// Solidity: event LogBindRequest(address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount)
-func (_Tokenhub *TokenhubFilterer) FilterLogBindRequest(opts *bind.FilterOpts) (*TokenhubLogBindRequestIterator, error) {
+// Solidity: event rewardTo(address to, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) FilterRewardTo(opts *bind.FilterOpts) (*TokenhubRewardToIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBindRequest")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "rewardTo")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBindRequestIterator{contract: _Tokenhub.contract, event: "LogBindRequest", logs: logs, sub: sub}, nil
+	return &TokenhubRewardToIterator{contract: _Tokenhub.contract, event: "rewardTo", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBindRequest is a free log subscription operation binding the contract event 0xf8608cf3c27350e6aa0beaa6723ea6911e3d7353e8b22a69bb112c15f93867ca.
+// WatchRewardTo is a free log subscription operation binding the contract event 0xf8b71c64315fc33b2ead2adfa487955065152a8ac33d9d5193aafd7f45dc15a0.
 //
-// Solidity: event LogBindRequest(address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount)
-func (_Tokenhub *TokenhubFilterer) WatchLogBindRequest(opts *bind.WatchOpts, sink chan<- *TokenhubLogBindRequest) (event.Subscription, error) {
+// Solidity: event rewardTo(address to, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) WatchRewardTo(opts *bind.WatchOpts, sink chan<- *TokenhubRewardTo) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBindRequest")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "rewardTo")
 	if err != nil {
 		return nil, err
 	}
@@ -1874,8 +2063,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindRequest(opts *bind.WatchOpts, sin
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBindRequest)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBindRequest", log); err != nil {
+				event := new(TokenhubRewardTo)
+				if err := _Tokenhub.contract.UnpackLog(event, "rewardTo", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1896,20 +2085,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindRequest(opts *bind.WatchOpts, sin
 	}), nil
 }
 
-// ParseLogBindRequest is a log parse operation binding the contract event 0xf8608cf3c27350e6aa0beaa6723ea6911e3d7353e8b22a69bb112c15f93867ca.
+// ParseRewardTo is a log parse operation binding the contract event 0xf8b71c64315fc33b2ead2adfa487955065152a8ac33d9d5193aafd7f45dc15a0.
 //
-// Solidity: event LogBindRequest(address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount)
-func (_Tokenhub *TokenhubFilterer) ParseLogBindRequest(log types.Log) (*TokenhubLogBindRequest, error) {
-	event := new(TokenhubLogBindRequest)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBindRequest", log); err != nil {
+// Solidity: event rewardTo(address to, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) ParseRewardTo(log types.Log) (*TokenhubRewardTo, error) {
+	event := new(TokenhubRewardTo)
+	if err := _Tokenhub.contract.UnpackLog(event, "rewardTo", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBindSuccessIterator is returned from FilterLogBindSuccess and is used to iterate over the raw logs and unpacked data for LogBindSuccess events raised by the Tokenhub contract.
-type TokenhubLogBindSuccessIterator struct {
-	Event *TokenhubLogBindSuccess // Event containing the contract specifics and raw log
+// TokenhubTransferInSuccessIterator is returned from FilterTransferInSuccess and is used to iterate over the raw logs and unpacked data for TransferInSuccess events raised by the Tokenhub contract.
+type TokenhubTransferInSuccessIterator struct {
+	Event *TokenhubTransferInSuccess // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1923,7 +2112,7 @@ type TokenhubLogBindSuccessIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBindSuccessIterator) Next() bool {
+func (it *TokenhubTransferInSuccessIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1932,7 +2121,7 @@ func (it *TokenhubLogBindSuccessIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBindSuccess)
+			it.Event = new(TokenhubTransferInSuccess)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1947,7 +2136,7 @@ func (it *TokenhubLogBindSuccessIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBindSuccess)
+		it.Event = new(TokenhubTransferInSuccess)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1963,46 +2152,43 @@ func (it *TokenhubLogBindSuccessIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBindSuccessIterator) Error() error {
+func (it *TokenhubTransferInSuccessIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBindSuccessIterator) Close() error {
+func (it *TokenhubTransferInSuccessIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBindSuccess represents a LogBindSuccess event raised by the Tokenhub contract.
-type TokenhubLogBindSuccess struct {
-	Sequence        *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	TotalSupply     *big.Int
-	PeggyAmount     *big.Int
-	Decimals        *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubTransferInSuccess represents a TransferInSuccess event raised by the Tokenhub contract.
+type TokenhubTransferInSuccess struct {
+	Bep2eAddr  common.Address
+	RefundAddr common.Address
+	Amount     *big.Int
+	Raw        types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBindSuccess is a free log retrieval operation binding the contract event 0x8005b9354dd0ca4c5593805bcd00ea12b5fce8a2cc9bc15252f50fb2d17c09d2.
+// FilterTransferInSuccess is a free log retrieval operation binding the contract event 0x471eb9cc1ffe55ffadf15b32595415eb9d80f22e761d24bd6dffc607e1284d59.
 //
-// Solidity: event LogBindSuccess(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount, uint256 decimals)
-func (_Tokenhub *TokenhubFilterer) FilterLogBindSuccess(opts *bind.FilterOpts) (*TokenhubLogBindSuccessIterator, error) {
+// Solidity: event transferInSuccess(address bep2eAddr, address refundAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) FilterTransferInSuccess(opts *bind.FilterOpts) (*TokenhubTransferInSuccessIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBindSuccess")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "transferInSuccess")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBindSuccessIterator{contract: _Tokenhub.contract, event: "LogBindSuccess", logs: logs, sub: sub}, nil
+	return &TokenhubTransferInSuccessIterator{contract: _Tokenhub.contract, event: "transferInSuccess", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBindSuccess is a free log subscription operation binding the contract event 0x8005b9354dd0ca4c5593805bcd00ea12b5fce8a2cc9bc15252f50fb2d17c09d2.
+// WatchTransferInSuccess is a free log subscription operation binding the contract event 0x471eb9cc1ffe55ffadf15b32595415eb9d80f22e761d24bd6dffc607e1284d59.
 //
-// Solidity: event LogBindSuccess(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount, uint256 decimals)
-func (_Tokenhub *TokenhubFilterer) WatchLogBindSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubLogBindSuccess) (event.Subscription, error) {
+// Solidity: event transferInSuccess(address bep2eAddr, address refundAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) WatchTransferInSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubTransferInSuccess) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBindSuccess")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "transferInSuccess")
 	if err != nil {
 		return nil, err
 	}
@@ -2012,8 +2198,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindSuccess(opts *bind.WatchOpts, sin
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBindSuccess)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBindSuccess", log); err != nil {
+				event := new(TokenhubTransferInSuccess)
+				if err := _Tokenhub.contract.UnpackLog(event, "transferInSuccess", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2034,20 +2220,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindSuccess(opts *bind.WatchOpts, sin
 	}), nil
 }
 
-// ParseLogBindSuccess is a log parse operation binding the contract event 0x8005b9354dd0ca4c5593805bcd00ea12b5fce8a2cc9bc15252f50fb2d17c09d2.
+// ParseTransferInSuccess is a log parse operation binding the contract event 0x471eb9cc1ffe55ffadf15b32595415eb9d80f22e761d24bd6dffc607e1284d59.
 //
-// Solidity: event LogBindSuccess(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol, uint256 totalSupply, uint256 peggyAmount, uint256 decimals)
-func (_Tokenhub *TokenhubFilterer) ParseLogBindSuccess(log types.Log) (*TokenhubLogBindSuccess, error) {
-	event := new(TokenhubLogBindSuccess)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBindSuccess", log); err != nil {
+// Solidity: event transferInSuccess(address bep2eAddr, address refundAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) ParseTransferInSuccess(log types.Log) (*TokenhubTransferInSuccess, error) {
+	event := new(TokenhubTransferInSuccess)
+	if err := _Tokenhub.contract.UnpackLog(event, "transferInSuccess", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogBindTimeoutIterator is returned from FilterLogBindTimeout and is used to iterate over the raw logs and unpacked data for LogBindTimeout events raised by the Tokenhub contract.
-type TokenhubLogBindTimeoutIterator struct {
-	Event *TokenhubLogBindTimeout // Event containing the contract specifics and raw log
+// TokenhubTransferOutSuccessIterator is returned from FilterTransferOutSuccess and is used to iterate over the raw logs and unpacked data for TransferOutSuccess events raised by the Tokenhub contract.
+type TokenhubTransferOutSuccessIterator struct {
+	Event *TokenhubTransferOutSuccess // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2061,7 +2247,7 @@ type TokenhubLogBindTimeoutIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogBindTimeoutIterator) Next() bool {
+func (it *TokenhubTransferOutSuccessIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2070,7 +2256,7 @@ func (it *TokenhubLogBindTimeoutIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogBindTimeout)
+			it.Event = new(TokenhubTransferOutSuccess)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2085,7 +2271,7 @@ func (it *TokenhubLogBindTimeoutIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogBindTimeout)
+		it.Event = new(TokenhubTransferOutSuccess)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2101,43 +2287,43 @@ func (it *TokenhubLogBindTimeoutIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogBindTimeoutIterator) Error() error {
+func (it *TokenhubTransferOutSuccessIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogBindTimeoutIterator) Close() error {
+func (it *TokenhubTransferOutSuccessIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogBindTimeout represents a LogBindTimeout event raised by the Tokenhub contract.
-type TokenhubLogBindTimeout struct {
-	Sequence        *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	Raw             types.Log // Blockchain specific contextual infos
+// TokenhubTransferOutSuccess represents a TransferOutSuccess event raised by the Tokenhub contract.
+type TokenhubTransferOutSuccess struct {
+	Bep2eAddr  common.Address
+	SenderAddr common.Address
+	Amount     *big.Int
+	Raw        types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogBindTimeout is a free log retrieval operation binding the contract event 0x4781c2d0a33124fb32083581f5b48c93a59b71fd567ce2d4a56c89196baa2ccd.
+// FilterTransferOutSuccess is a free log retrieval operation binding the contract event 0xe9750a449d7c7d8f872b7ee10d75b95a948bc425b3c2d52052587665742c81ec.
 //
-// Solidity: event LogBindTimeout(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) FilterLogBindTimeout(opts *bind.FilterOpts) (*TokenhubLogBindTimeoutIterator, error) {
+// Solidity: event transferOutSuccess(address bep2eAddr, address senderAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) FilterTransferOutSuccess(opts *bind.FilterOpts) (*TokenhubTransferOutSuccessIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogBindTimeout")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "transferOutSuccess")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogBindTimeoutIterator{contract: _Tokenhub.contract, event: "LogBindTimeout", logs: logs, sub: sub}, nil
+	return &TokenhubTransferOutSuccessIterator{contract: _Tokenhub.contract, event: "transferOutSuccess", logs: logs, sub: sub}, nil
 }
 
-// WatchLogBindTimeout is a free log subscription operation binding the contract event 0x4781c2d0a33124fb32083581f5b48c93a59b71fd567ce2d4a56c89196baa2ccd.
+// WatchTransferOutSuccess is a free log subscription operation binding the contract event 0xe9750a449d7c7d8f872b7ee10d75b95a948bc425b3c2d52052587665742c81ec.
 //
-// Solidity: event LogBindTimeout(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) WatchLogBindTimeout(opts *bind.WatchOpts, sink chan<- *TokenhubLogBindTimeout) (event.Subscription, error) {
+// Solidity: event transferOutSuccess(address bep2eAddr, address senderAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) WatchTransferOutSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubTransferOutSuccess) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogBindTimeout")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "transferOutSuccess")
 	if err != nil {
 		return nil, err
 	}
@@ -2147,8 +2333,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindTimeout(opts *bind.WatchOpts, sin
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogBindTimeout)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogBindTimeout", log); err != nil {
+				event := new(TokenhubTransferOutSuccess)
+				if err := _Tokenhub.contract.UnpackLog(event, "transferOutSuccess", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2169,20 +2355,20 @@ func (_Tokenhub *TokenhubFilterer) WatchLogBindTimeout(opts *bind.WatchOpts, sin
 	}), nil
 }
 
-// ParseLogBindTimeout is a log parse operation binding the contract event 0x4781c2d0a33124fb32083581f5b48c93a59b71fd567ce2d4a56c89196baa2ccd.
+// ParseTransferOutSuccess is a log parse operation binding the contract event 0xe9750a449d7c7d8f872b7ee10d75b95a948bc425b3c2d52052587665742c81ec.
 //
-// Solidity: event LogBindTimeout(uint256 sequence, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) ParseLogBindTimeout(log types.Log) (*TokenhubLogBindTimeout, error) {
-	event := new(TokenhubLogBindTimeout)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogBindTimeout", log); err != nil {
+// Solidity: event transferOutSuccess(address bep2eAddr, address senderAddr, uint256 amount)
+func (_Tokenhub *TokenhubFilterer) ParseTransferOutSuccess(log types.Log) (*TokenhubTransferOutSuccess, error) {
+	event := new(TokenhubTransferOutSuccess)
+	if err := _Tokenhub.contract.UnpackLog(event, "transferOutSuccess", log); err != nil {
 		return nil, err
 	}
 	return event, nil
 }
 
-// TokenhubLogRefundFailureInsufficientBalanceIterator is returned from FilterLogRefundFailureInsufficientBalance and is used to iterate over the raw logs and unpacked data for LogRefundFailureInsufficientBalance events raised by the Tokenhub contract.
-type TokenhubLogRefundFailureInsufficientBalanceIterator struct {
-	Event *TokenhubLogRefundFailureInsufficientBalance // Event containing the contract specifics and raw log
+// TokenhubUnexpectedPackageIterator is returned from FilterUnexpectedPackage and is used to iterate over the raw logs and unpacked data for UnexpectedPackage events raised by the Tokenhub contract.
+type TokenhubUnexpectedPackageIterator struct {
+	Event *TokenhubUnexpectedPackage // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -2196,7 +2382,7 @@ type TokenhubLogRefundFailureInsufficientBalanceIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Next() bool {
+func (it *TokenhubUnexpectedPackageIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -2205,7 +2391,7 @@ func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(TokenhubLogRefundFailureInsufficientBalance)
+			it.Event = new(TokenhubUnexpectedPackage)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -2220,7 +2406,7 @@ func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(TokenhubLogRefundFailureInsufficientBalance)
+		it.Event = new(TokenhubUnexpectedPackage)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -2236,45 +2422,42 @@ func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Error() error {
+func (it *TokenhubUnexpectedPackageIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *TokenhubLogRefundFailureInsufficientBalanceIterator) Close() error {
+func (it *TokenhubUnexpectedPackageIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// TokenhubLogRefundFailureInsufficientBalance represents a LogRefundFailureInsufficientBalance event raised by the Tokenhub contract.
-type TokenhubLogRefundFailureInsufficientBalance struct {
-	ContractAddr  common.Address
-	RefundAddr    common.Address
-	Amount        *big.Int
-	Reason        uint16
-	ActualBalance *big.Int
-	Raw           types.Log // Blockchain specific contextual infos
+// TokenhubUnexpectedPackage represents a UnexpectedPackage event raised by the Tokenhub contract.
+type TokenhubUnexpectedPackage struct {
+	ChannelId uint8
+	MsgBytes  []byte
+	Raw       types.Log // Blockchain specific contextual infos
 }
 
-// FilterLogRefundFailureInsufficientBalance is a free log retrieval operation binding the contract event 0x3c4b6baf924ba2c954f9d76392ea4a866fda4b545684f54badbb5ab67c59f277.
+// FilterUnexpectedPackage is a free log retrieval operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
 //
-// Solidity: event LogRefundFailureInsufficientBalance(address contractAddr, address refundAddr, uint256 amount, uint16 reason, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) FilterLogRefundFailureInsufficientBalance(opts *bind.FilterOpts) (*TokenhubLogRefundFailureInsufficientBalanceIterator, error) {
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Tokenhub *TokenhubFilterer) FilterUnexpectedPackage(opts *bind.FilterOpts) (*TokenhubUnexpectedPackageIterator, error) {
 
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogRefundFailureInsufficientBalance")
+	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "unexpectedPackage")
 	if err != nil {
 		return nil, err
 	}
-	return &TokenhubLogRefundFailureInsufficientBalanceIterator{contract: _Tokenhub.contract, event: "LogRefundFailureInsufficientBalance", logs: logs, sub: sub}, nil
+	return &TokenhubUnexpectedPackageIterator{contract: _Tokenhub.contract, event: "unexpectedPackage", logs: logs, sub: sub}, nil
 }
 
-// WatchLogRefundFailureInsufficientBalance is a free log subscription operation binding the contract event 0x3c4b6baf924ba2c954f9d76392ea4a866fda4b545684f54badbb5ab67c59f277.
+// WatchUnexpectedPackage is a free log subscription operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
 //
-// Solidity: event LogRefundFailureInsufficientBalance(address contractAddr, address refundAddr, uint256 amount, uint16 reason, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) WatchLogRefundFailureInsufficientBalance(opts *bind.WatchOpts, sink chan<- *TokenhubLogRefundFailureInsufficientBalance) (event.Subscription, error) {
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Tokenhub *TokenhubFilterer) WatchUnexpectedPackage(opts *bind.WatchOpts, sink chan<- *TokenhubUnexpectedPackage) (event.Subscription, error) {
 
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogRefundFailureInsufficientBalance")
+	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "unexpectedPackage")
 	if err != nil {
 		return nil, err
 	}
@@ -2284,8 +2467,8 @@ func (_Tokenhub *TokenhubFilterer) WatchLogRefundFailureInsufficientBalance(opts
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogRefundFailureInsufficientBalance)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureInsufficientBalance", log); err != nil {
+				event := new(TokenhubUnexpectedPackage)
+				if err := _Tokenhub.contract.UnpackLog(event, "unexpectedPackage", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -2306,1518 +2489,12 @@ func (_Tokenhub *TokenhubFilterer) WatchLogRefundFailureInsufficientBalance(opts
 	}), nil
 }
 
-// ParseLogRefundFailureInsufficientBalance is a log parse operation binding the contract event 0x3c4b6baf924ba2c954f9d76392ea4a866fda4b545684f54badbb5ab67c59f277.
+// ParseUnexpectedPackage is a log parse operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
 //
-// Solidity: event LogRefundFailureInsufficientBalance(address contractAddr, address refundAddr, uint256 amount, uint16 reason, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) ParseLogRefundFailureInsufficientBalance(log types.Log) (*TokenhubLogRefundFailureInsufficientBalance, error) {
-	event := new(TokenhubLogRefundFailureInsufficientBalance)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureInsufficientBalance", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogRefundFailureUnboundTokenIterator is returned from FilterLogRefundFailureUnboundToken and is used to iterate over the raw logs and unpacked data for LogRefundFailureUnboundToken events raised by the Tokenhub contract.
-type TokenhubLogRefundFailureUnboundTokenIterator struct {
-	Event *TokenhubLogRefundFailureUnboundToken // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogRefundFailureUnboundTokenIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogRefundFailureUnboundToken)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogRefundFailureUnboundToken)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogRefundFailureUnboundTokenIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogRefundFailureUnboundTokenIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogRefundFailureUnboundToken represents a LogRefundFailureUnboundToken event raised by the Tokenhub contract.
-type TokenhubLogRefundFailureUnboundToken struct {
-	ContractAddr common.Address
-	RefundAddr   common.Address
-	Amount       *big.Int
-	Reason       uint16
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogRefundFailureUnboundToken is a free log retrieval operation binding the contract event 0xc9f4828eed39b4d08b0bcc16c824d67db7f30fdb36aa5572912134742f623f99.
-//
-// Solidity: event LogRefundFailureUnboundToken(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) FilterLogRefundFailureUnboundToken(opts *bind.FilterOpts) (*TokenhubLogRefundFailureUnboundTokenIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogRefundFailureUnboundToken")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogRefundFailureUnboundTokenIterator{contract: _Tokenhub.contract, event: "LogRefundFailureUnboundToken", logs: logs, sub: sub}, nil
-}
-
-// WatchLogRefundFailureUnboundToken is a free log subscription operation binding the contract event 0xc9f4828eed39b4d08b0bcc16c824d67db7f30fdb36aa5572912134742f623f99.
-//
-// Solidity: event LogRefundFailureUnboundToken(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) WatchLogRefundFailureUnboundToken(opts *bind.WatchOpts, sink chan<- *TokenhubLogRefundFailureUnboundToken) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogRefundFailureUnboundToken")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogRefundFailureUnboundToken)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureUnboundToken", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogRefundFailureUnboundToken is a log parse operation binding the contract event 0xc9f4828eed39b4d08b0bcc16c824d67db7f30fdb36aa5572912134742f623f99.
-//
-// Solidity: event LogRefundFailureUnboundToken(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) ParseLogRefundFailureUnboundToken(log types.Log) (*TokenhubLogRefundFailureUnboundToken, error) {
-	event := new(TokenhubLogRefundFailureUnboundToken)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureUnboundToken", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogRefundFailureUnknownReasonIterator is returned from FilterLogRefundFailureUnknownReason and is used to iterate over the raw logs and unpacked data for LogRefundFailureUnknownReason events raised by the Tokenhub contract.
-type TokenhubLogRefundFailureUnknownReasonIterator struct {
-	Event *TokenhubLogRefundFailureUnknownReason // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogRefundFailureUnknownReasonIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogRefundFailureUnknownReason)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogRefundFailureUnknownReason)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogRefundFailureUnknownReasonIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogRefundFailureUnknownReasonIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogRefundFailureUnknownReason represents a LogRefundFailureUnknownReason event raised by the Tokenhub contract.
-type TokenhubLogRefundFailureUnknownReason struct {
-	ContractAddr common.Address
-	RefundAddr   common.Address
-	Amount       *big.Int
-	Reason       uint16
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogRefundFailureUnknownReason is a free log retrieval operation binding the contract event 0x21ecc19fbf4244dbd58a78f83d525251163700dfdeec195b4e0ab98127ad790c.
-//
-// Solidity: event LogRefundFailureUnknownReason(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) FilterLogRefundFailureUnknownReason(opts *bind.FilterOpts) (*TokenhubLogRefundFailureUnknownReasonIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogRefundFailureUnknownReason")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogRefundFailureUnknownReasonIterator{contract: _Tokenhub.contract, event: "LogRefundFailureUnknownReason", logs: logs, sub: sub}, nil
-}
-
-// WatchLogRefundFailureUnknownReason is a free log subscription operation binding the contract event 0x21ecc19fbf4244dbd58a78f83d525251163700dfdeec195b4e0ab98127ad790c.
-//
-// Solidity: event LogRefundFailureUnknownReason(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) WatchLogRefundFailureUnknownReason(opts *bind.WatchOpts, sink chan<- *TokenhubLogRefundFailureUnknownReason) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogRefundFailureUnknownReason")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogRefundFailureUnknownReason)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureUnknownReason", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogRefundFailureUnknownReason is a log parse operation binding the contract event 0x21ecc19fbf4244dbd58a78f83d525251163700dfdeec195b4e0ab98127ad790c.
-//
-// Solidity: event LogRefundFailureUnknownReason(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) ParseLogRefundFailureUnknownReason(log types.Log) (*TokenhubLogRefundFailureUnknownReason, error) {
-	event := new(TokenhubLogRefundFailureUnknownReason)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogRefundFailureUnknownReason", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogRefundSuccessIterator is returned from FilterLogRefundSuccess and is used to iterate over the raw logs and unpacked data for LogRefundSuccess events raised by the Tokenhub contract.
-type TokenhubLogRefundSuccessIterator struct {
-	Event *TokenhubLogRefundSuccess // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogRefundSuccessIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogRefundSuccess)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogRefundSuccess)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogRefundSuccessIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogRefundSuccessIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogRefundSuccess represents a LogRefundSuccess event raised by the Tokenhub contract.
-type TokenhubLogRefundSuccess struct {
-	ContractAddr common.Address
-	RefundAddr   common.Address
-	Amount       *big.Int
-	Reason       uint16
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogRefundSuccess is a free log retrieval operation binding the contract event 0x5d287c29bf23b5f4c450d5e83e5ca51c1f8225afb6f253e9d2ca107893b2a7e4.
-//
-// Solidity: event LogRefundSuccess(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) FilterLogRefundSuccess(opts *bind.FilterOpts) (*TokenhubLogRefundSuccessIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogRefundSuccess")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogRefundSuccessIterator{contract: _Tokenhub.contract, event: "LogRefundSuccess", logs: logs, sub: sub}, nil
-}
-
-// WatchLogRefundSuccess is a free log subscription operation binding the contract event 0x5d287c29bf23b5f4c450d5e83e5ca51c1f8225afb6f253e9d2ca107893b2a7e4.
-//
-// Solidity: event LogRefundSuccess(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) WatchLogRefundSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubLogRefundSuccess) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogRefundSuccess")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogRefundSuccess)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogRefundSuccess", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogRefundSuccess is a log parse operation binding the contract event 0x5d287c29bf23b5f4c450d5e83e5ca51c1f8225afb6f253e9d2ca107893b2a7e4.
-//
-// Solidity: event LogRefundSuccess(address contractAddr, address refundAddr, uint256 amount, uint16 reason)
-func (_Tokenhub *TokenhubFilterer) ParseLogRefundSuccess(log types.Log) (*TokenhubLogRefundSuccess, error) {
-	event := new(TokenhubLogRefundSuccess)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogRefundSuccess", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferInFailureInsufficientBalanceIterator is returned from FilterLogTransferInFailureInsufficientBalance and is used to iterate over the raw logs and unpacked data for LogTransferInFailureInsufficientBalance events raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureInsufficientBalanceIterator struct {
-	Event *TokenhubLogTransferInFailureInsufficientBalance // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferInFailureInsufficientBalanceIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferInFailureInsufficientBalance)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferInFailureInsufficientBalance)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferInFailureInsufficientBalanceIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferInFailureInsufficientBalanceIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferInFailureInsufficientBalance represents a LogTransferInFailureInsufficientBalance event raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureInsufficientBalance struct {
-	Sequence        *big.Int
-	RefundAddr      common.Address
-	Recipient       common.Address
-	Bep2TokenAmount *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	ActualBalance   *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferInFailureInsufficientBalance is a free log retrieval operation binding the contract event 0x1de400dfa3e72ba83f12c6f1d8b9b85dc3d2aedc6eacc27b481267826aec7422.
-//
-// Solidity: event LogTransferInFailureInsufficientBalance(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferInFailureInsufficientBalance(opts *bind.FilterOpts) (*TokenhubLogTransferInFailureInsufficientBalanceIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferInFailureInsufficientBalance")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferInFailureInsufficientBalanceIterator{contract: _Tokenhub.contract, event: "LogTransferInFailureInsufficientBalance", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferInFailureInsufficientBalance is a free log subscription operation binding the contract event 0x1de400dfa3e72ba83f12c6f1d8b9b85dc3d2aedc6eacc27b481267826aec7422.
-//
-// Solidity: event LogTransferInFailureInsufficientBalance(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferInFailureInsufficientBalance(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferInFailureInsufficientBalance) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferInFailureInsufficientBalance")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferInFailureInsufficientBalance)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureInsufficientBalance", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferInFailureInsufficientBalance is a log parse operation binding the contract event 0x1de400dfa3e72ba83f12c6f1d8b9b85dc3d2aedc6eacc27b481267826aec7422.
-//
-// Solidity: event LogTransferInFailureInsufficientBalance(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 actualBalance)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferInFailureInsufficientBalance(log types.Log) (*TokenhubLogTransferInFailureInsufficientBalance, error) {
-	event := new(TokenhubLogTransferInFailureInsufficientBalance)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureInsufficientBalance", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferInFailureTimeoutIterator is returned from FilterLogTransferInFailureTimeout and is used to iterate over the raw logs and unpacked data for LogTransferInFailureTimeout events raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureTimeoutIterator struct {
-	Event *TokenhubLogTransferInFailureTimeout // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferInFailureTimeoutIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferInFailureTimeout)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferInFailureTimeout)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferInFailureTimeoutIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferInFailureTimeoutIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferInFailureTimeout represents a LogTransferInFailureTimeout event raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureTimeout struct {
-	Sequence        *big.Int
-	RefundAddr      common.Address
-	Recipient       common.Address
-	Bep2TokenAmount *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	ExpireTime      *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferInFailureTimeout is a free log retrieval operation binding the contract event 0x8090e98e190cb0b05412d5c1a8cd5ee9af5d40da935335cef5d4179c7da63d79.
-//
-// Solidity: event LogTransferInFailureTimeout(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferInFailureTimeout(opts *bind.FilterOpts) (*TokenhubLogTransferInFailureTimeoutIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferInFailureTimeout")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferInFailureTimeoutIterator{contract: _Tokenhub.contract, event: "LogTransferInFailureTimeout", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferInFailureTimeout is a free log subscription operation binding the contract event 0x8090e98e190cb0b05412d5c1a8cd5ee9af5d40da935335cef5d4179c7da63d79.
-//
-// Solidity: event LogTransferInFailureTimeout(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferInFailureTimeout(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferInFailureTimeout) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferInFailureTimeout")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferInFailureTimeout)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureTimeout", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferInFailureTimeout is a log parse operation binding the contract event 0x8090e98e190cb0b05412d5c1a8cd5ee9af5d40da935335cef5d4179c7da63d79.
-//
-// Solidity: event LogTransferInFailureTimeout(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferInFailureTimeout(log types.Log) (*TokenhubLogTransferInFailureTimeout, error) {
-	event := new(TokenhubLogTransferInFailureTimeout)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureTimeout", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferInFailureUnboundTokenIterator is returned from FilterLogTransferInFailureUnboundToken and is used to iterate over the raw logs and unpacked data for LogTransferInFailureUnboundToken events raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureUnboundTokenIterator struct {
-	Event *TokenhubLogTransferInFailureUnboundToken // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferInFailureUnboundTokenIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferInFailureUnboundToken)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferInFailureUnboundToken)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferInFailureUnboundTokenIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferInFailureUnboundTokenIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferInFailureUnboundToken represents a LogTransferInFailureUnboundToken event raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureUnboundToken struct {
-	Sequence        *big.Int
-	RefundAddr      common.Address
-	Recipient       common.Address
-	Bep2TokenAmount *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	Raw             types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferInFailureUnboundToken is a free log retrieval operation binding the contract event 0x055f2adbd109a4e99b3821af55571cccb4981551d10e3846b21574d348572a59.
-//
-// Solidity: event LogTransferInFailureUnboundToken(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferInFailureUnboundToken(opts *bind.FilterOpts) (*TokenhubLogTransferInFailureUnboundTokenIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferInFailureUnboundToken")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferInFailureUnboundTokenIterator{contract: _Tokenhub.contract, event: "LogTransferInFailureUnboundToken", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferInFailureUnboundToken is a free log subscription operation binding the contract event 0x055f2adbd109a4e99b3821af55571cccb4981551d10e3846b21574d348572a59.
-//
-// Solidity: event LogTransferInFailureUnboundToken(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferInFailureUnboundToken(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferInFailureUnboundToken) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferInFailureUnboundToken")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferInFailureUnboundToken)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureUnboundToken", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferInFailureUnboundToken is a log parse operation binding the contract event 0x055f2adbd109a4e99b3821af55571cccb4981551d10e3846b21574d348572a59.
-//
-// Solidity: event LogTransferInFailureUnboundToken(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferInFailureUnboundToken(log types.Log) (*TokenhubLogTransferInFailureUnboundToken, error) {
-	event := new(TokenhubLogTransferInFailureUnboundToken)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureUnboundToken", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferInFailureUnknownReasonIterator is returned from FilterLogTransferInFailureUnknownReason and is used to iterate over the raw logs and unpacked data for LogTransferInFailureUnknownReason events raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureUnknownReasonIterator struct {
-	Event *TokenhubLogTransferInFailureUnknownReason // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferInFailureUnknownReasonIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferInFailureUnknownReason)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferInFailureUnknownReason)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferInFailureUnknownReasonIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferInFailureUnknownReasonIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferInFailureUnknownReason represents a LogTransferInFailureUnknownReason event raised by the Tokenhub contract.
-type TokenhubLogTransferInFailureUnknownReason struct {
-	Sequence        *big.Int
-	RefundAddr      common.Address
-	Recipient       common.Address
-	Bep2TokenAmount *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	Raw             types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferInFailureUnknownReason is a free log retrieval operation binding the contract event 0xcb6ddd4a252f58c1ff32f31fbb529dc35e8f6a81908f6211bbe7dfa94ef52f1f.
-//
-// Solidity: event LogTransferInFailureUnknownReason(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferInFailureUnknownReason(opts *bind.FilterOpts) (*TokenhubLogTransferInFailureUnknownReasonIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferInFailureUnknownReason")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferInFailureUnknownReasonIterator{contract: _Tokenhub.contract, event: "LogTransferInFailureUnknownReason", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferInFailureUnknownReason is a free log subscription operation binding the contract event 0xcb6ddd4a252f58c1ff32f31fbb529dc35e8f6a81908f6211bbe7dfa94ef52f1f.
-//
-// Solidity: event LogTransferInFailureUnknownReason(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferInFailureUnknownReason(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferInFailureUnknownReason) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferInFailureUnknownReason")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferInFailureUnknownReason)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureUnknownReason", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferInFailureUnknownReason is a log parse operation binding the contract event 0xcb6ddd4a252f58c1ff32f31fbb529dc35e8f6a81908f6211bbe7dfa94ef52f1f.
-//
-// Solidity: event LogTransferInFailureUnknownReason(uint256 sequence, address refundAddr, address recipient, uint256 bep2TokenAmount, address contractAddr, bytes32 bep2TokenSymbol)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferInFailureUnknownReason(log types.Log) (*TokenhubLogTransferInFailureUnknownReason, error) {
-	event := new(TokenhubLogTransferInFailureUnknownReason)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInFailureUnknownReason", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferInSuccessIterator is returned from FilterLogTransferInSuccess and is used to iterate over the raw logs and unpacked data for LogTransferInSuccess events raised by the Tokenhub contract.
-type TokenhubLogTransferInSuccessIterator struct {
-	Event *TokenhubLogTransferInSuccess // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferInSuccessIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferInSuccess)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferInSuccess)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferInSuccessIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferInSuccessIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferInSuccess represents a LogTransferInSuccess event raised by the Tokenhub contract.
-type TokenhubLogTransferInSuccess struct {
-	Sequence     *big.Int
-	Recipient    common.Address
-	Amount       *big.Int
-	ContractAddr common.Address
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferInSuccess is a free log retrieval operation binding the contract event 0x8b8816b9cf4590950a140d102435e65bcce6ee7c84bb38367dd2bb71b8ae4ad2.
-//
-// Solidity: event LogTransferInSuccess(uint256 sequence, address recipient, uint256 amount, address contractAddr)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferInSuccess(opts *bind.FilterOpts) (*TokenhubLogTransferInSuccessIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferInSuccess")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferInSuccessIterator{contract: _Tokenhub.contract, event: "LogTransferInSuccess", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferInSuccess is a free log subscription operation binding the contract event 0x8b8816b9cf4590950a140d102435e65bcce6ee7c84bb38367dd2bb71b8ae4ad2.
-//
-// Solidity: event LogTransferInSuccess(uint256 sequence, address recipient, uint256 amount, address contractAddr)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferInSuccess(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferInSuccess) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferInSuccess")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferInSuccess)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInSuccess", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferInSuccess is a log parse operation binding the contract event 0x8b8816b9cf4590950a140d102435e65bcce6ee7c84bb38367dd2bb71b8ae4ad2.
-//
-// Solidity: event LogTransferInSuccess(uint256 sequence, address recipient, uint256 amount, address contractAddr)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferInSuccess(log types.Log) (*TokenhubLogTransferInSuccess, error) {
-	event := new(TokenhubLogTransferInSuccess)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferInSuccess", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogTransferOutIterator is returned from FilterLogTransferOut and is used to iterate over the raw logs and unpacked data for LogTransferOut events raised by the Tokenhub contract.
-type TokenhubLogTransferOutIterator struct {
-	Event *TokenhubLogTransferOut // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogTransferOutIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogTransferOut)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogTransferOut)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogTransferOutIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogTransferOutIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogTransferOut represents a LogTransferOut event raised by the Tokenhub contract.
-type TokenhubLogTransferOut struct {
-	Sequence        *big.Int
-	RefundAddr      common.Address
-	Recipient       common.Address
-	Amount          *big.Int
-	ContractAddr    common.Address
-	Bep2TokenSymbol [32]byte
-	ExpireTime      *big.Int
-	RelayFee        *big.Int
-	Raw             types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogTransferOut is a free log retrieval operation binding the contract event 0x5bd451c53ab05abd9855ceb52a469590655af1d732a4cfd67f1f9b53d74dc613.
-//
-// Solidity: event LogTransferOut(uint256 sequence, address refundAddr, address recipient, uint256 amount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) FilterLogTransferOut(opts *bind.FilterOpts) (*TokenhubLogTransferOutIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogTransferOut")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogTransferOutIterator{contract: _Tokenhub.contract, event: "LogTransferOut", logs: logs, sub: sub}, nil
-}
-
-// WatchLogTransferOut is a free log subscription operation binding the contract event 0x5bd451c53ab05abd9855ceb52a469590655af1d732a4cfd67f1f9b53d74dc613.
-//
-// Solidity: event LogTransferOut(uint256 sequence, address refundAddr, address recipient, uint256 amount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) WatchLogTransferOut(opts *bind.WatchOpts, sink chan<- *TokenhubLogTransferOut) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogTransferOut")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogTransferOut)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogTransferOut", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogTransferOut is a log parse operation binding the contract event 0x5bd451c53ab05abd9855ceb52a469590655af1d732a4cfd67f1f9b53d74dc613.
-//
-// Solidity: event LogTransferOut(uint256 sequence, address refundAddr, address recipient, uint256 amount, address contractAddr, bytes32 bep2TokenSymbol, uint256 expireTime, uint256 relayFee)
-func (_Tokenhub *TokenhubFilterer) ParseLogTransferOut(log types.Log) (*TokenhubLogTransferOut, error) {
-	event := new(TokenhubLogTransferOut)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogTransferOut", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogUnexpectedFailureAssertionInBEP2EIterator is returned from FilterLogUnexpectedFailureAssertionInBEP2E and is used to iterate over the raw logs and unpacked data for LogUnexpectedFailureAssertionInBEP2E events raised by the Tokenhub contract.
-type TokenhubLogUnexpectedFailureAssertionInBEP2EIterator struct {
-	Event *TokenhubLogUnexpectedFailureAssertionInBEP2E // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogUnexpectedFailureAssertionInBEP2EIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogUnexpectedFailureAssertionInBEP2E)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogUnexpectedFailureAssertionInBEP2E)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogUnexpectedFailureAssertionInBEP2EIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogUnexpectedFailureAssertionInBEP2EIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogUnexpectedFailureAssertionInBEP2E represents a LogUnexpectedFailureAssertionInBEP2E event raised by the Tokenhub contract.
-type TokenhubLogUnexpectedFailureAssertionInBEP2E struct {
-	ContractAddr common.Address
-	LowLevelData []byte
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogUnexpectedFailureAssertionInBEP2E is a free log retrieval operation binding the contract event 0x31a48d93e6850d386f670b9e376328798aa76e04eccb473f292a73cfd4955edb.
-//
-// Solidity: event LogUnexpectedFailureAssertionInBEP2E(address contractAddr, bytes lowLevelData)
-func (_Tokenhub *TokenhubFilterer) FilterLogUnexpectedFailureAssertionInBEP2E(opts *bind.FilterOpts) (*TokenhubLogUnexpectedFailureAssertionInBEP2EIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogUnexpectedFailureAssertionInBEP2E")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogUnexpectedFailureAssertionInBEP2EIterator{contract: _Tokenhub.contract, event: "LogUnexpectedFailureAssertionInBEP2E", logs: logs, sub: sub}, nil
-}
-
-// WatchLogUnexpectedFailureAssertionInBEP2E is a free log subscription operation binding the contract event 0x31a48d93e6850d386f670b9e376328798aa76e04eccb473f292a73cfd4955edb.
-//
-// Solidity: event LogUnexpectedFailureAssertionInBEP2E(address contractAddr, bytes lowLevelData)
-func (_Tokenhub *TokenhubFilterer) WatchLogUnexpectedFailureAssertionInBEP2E(opts *bind.WatchOpts, sink chan<- *TokenhubLogUnexpectedFailureAssertionInBEP2E) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogUnexpectedFailureAssertionInBEP2E")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogUnexpectedFailureAssertionInBEP2E)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogUnexpectedFailureAssertionInBEP2E", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogUnexpectedFailureAssertionInBEP2E is a log parse operation binding the contract event 0x31a48d93e6850d386f670b9e376328798aa76e04eccb473f292a73cfd4955edb.
-//
-// Solidity: event LogUnexpectedFailureAssertionInBEP2E(address contractAddr, bytes lowLevelData)
-func (_Tokenhub *TokenhubFilterer) ParseLogUnexpectedFailureAssertionInBEP2E(log types.Log) (*TokenhubLogUnexpectedFailureAssertionInBEP2E, error) {
-	event := new(TokenhubLogUnexpectedFailureAssertionInBEP2E)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogUnexpectedFailureAssertionInBEP2E", log); err != nil {
-		return nil, err
-	}
-	return event, nil
-}
-
-// TokenhubLogUnexpectedRevertInBEP2EIterator is returned from FilterLogUnexpectedRevertInBEP2E and is used to iterate over the raw logs and unpacked data for LogUnexpectedRevertInBEP2E events raised by the Tokenhub contract.
-type TokenhubLogUnexpectedRevertInBEP2EIterator struct {
-	Event *TokenhubLogUnexpectedRevertInBEP2E // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *TokenhubLogUnexpectedRevertInBEP2EIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(TokenhubLogUnexpectedRevertInBEP2E)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(TokenhubLogUnexpectedRevertInBEP2E)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *TokenhubLogUnexpectedRevertInBEP2EIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *TokenhubLogUnexpectedRevertInBEP2EIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// TokenhubLogUnexpectedRevertInBEP2E represents a LogUnexpectedRevertInBEP2E event raised by the Tokenhub contract.
-type TokenhubLogUnexpectedRevertInBEP2E struct {
-	ContractAddr common.Address
-	Reason       string
-	Raw          types.Log // Blockchain specific contextual infos
-}
-
-// FilterLogUnexpectedRevertInBEP2E is a free log retrieval operation binding the contract event 0x6b12c383d2683ef480c42ffdc69b5e1b142f2d9e63993c4ba14789d43b9f4999.
-//
-// Solidity: event LogUnexpectedRevertInBEP2E(address contractAddr, string reason)
-func (_Tokenhub *TokenhubFilterer) FilterLogUnexpectedRevertInBEP2E(opts *bind.FilterOpts) (*TokenhubLogUnexpectedRevertInBEP2EIterator, error) {
-
-	logs, sub, err := _Tokenhub.contract.FilterLogs(opts, "LogUnexpectedRevertInBEP2E")
-	if err != nil {
-		return nil, err
-	}
-	return &TokenhubLogUnexpectedRevertInBEP2EIterator{contract: _Tokenhub.contract, event: "LogUnexpectedRevertInBEP2E", logs: logs, sub: sub}, nil
-}
-
-// WatchLogUnexpectedRevertInBEP2E is a free log subscription operation binding the contract event 0x6b12c383d2683ef480c42ffdc69b5e1b142f2d9e63993c4ba14789d43b9f4999.
-//
-// Solidity: event LogUnexpectedRevertInBEP2E(address contractAddr, string reason)
-func (_Tokenhub *TokenhubFilterer) WatchLogUnexpectedRevertInBEP2E(opts *bind.WatchOpts, sink chan<- *TokenhubLogUnexpectedRevertInBEP2E) (event.Subscription, error) {
-
-	logs, sub, err := _Tokenhub.contract.WatchLogs(opts, "LogUnexpectedRevertInBEP2E")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(TokenhubLogUnexpectedRevertInBEP2E)
-				if err := _Tokenhub.contract.UnpackLog(event, "LogUnexpectedRevertInBEP2E", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseLogUnexpectedRevertInBEP2E is a log parse operation binding the contract event 0x6b12c383d2683ef480c42ffdc69b5e1b142f2d9e63993c4ba14789d43b9f4999.
-//
-// Solidity: event LogUnexpectedRevertInBEP2E(address contractAddr, string reason)
-func (_Tokenhub *TokenhubFilterer) ParseLogUnexpectedRevertInBEP2E(log types.Log) (*TokenhubLogUnexpectedRevertInBEP2E, error) {
-	event := new(TokenhubLogUnexpectedRevertInBEP2E)
-	if err := _Tokenhub.contract.UnpackLog(event, "LogUnexpectedRevertInBEP2E", log); err != nil {
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Tokenhub *TokenhubFilterer) ParseUnexpectedPackage(log types.Log) (*TokenhubUnexpectedPackage, error) {
+	event := new(TokenhubUnexpectedPackage)
+	if err := _Tokenhub.contract.UnpackLog(event, "unexpectedPackage", log); err != nil {
 		return nil, err
 	}
 	return event, nil

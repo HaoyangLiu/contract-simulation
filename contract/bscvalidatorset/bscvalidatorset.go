@@ -28,7 +28,7 @@ var (
 )
 
 // BscvalidatorsetABI is the input ABI used to generate the binding from.
-const BscvalidatorsetABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"batchTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reason\",\"type\":\"string\"}],\"name\":\"batchTransferFailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"reason\",\"type\":\"bytes\"}],\"name\":\"batchTransferLowerFailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deprecatedDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"addresspayable\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"directTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"addresspayable\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"directTransferFail\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"failReasonWithStr\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"paramChange\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"systemTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"validatorEmptyJailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"sequence\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorFelony\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"validatorJailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorMisdemeanor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"validatorSetUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"CHANNEL_ID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DUSTY_INCOMING\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"EXTRA_FEE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GOV_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"INCENTIVIZE_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"INIT_VALIDATORSET_BYTES\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"JAIL_MESSAGE_TYPE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"LIGHT_CLIENT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"RELAYERHUB_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"RELAYER_REWARD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SLASH_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SYSTEM_REWARD_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TOKEN_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VALIDATORS_UPDATE_MESSAGE_TYPE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VALIDATOR_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"alreadyInit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"currentValidatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"consensusAddress\",\"type\":\"address\"},{\"internalType\":\"addresspayable\",\"name\":\"feeAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"BBCFeeAddress\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"votingPower\",\"type\":\"uint64\"},{\"internalType\":\"bool\",\"name\":\"jailed\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"incoming\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"expireTimeSecondGap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"extraFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"felonySequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"previousDepositHeight\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"relayerReward\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"sequence\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalInComing\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"valAddr\",\"type\":\"address\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"},{\"internalType\":\"uint64\",\"name\":\"height\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"packageSequence\",\"type\":\"uint64\"}],\"name\":\"handlePackage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"getIncoming\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"misdemeanor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"felony\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"updateParam\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
+const BscvalidatorsetABI = "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"batchTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"reason\",\"type\":\"string\"}],\"name\":\"batchTransferFailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"reason\",\"type\":\"bytes\"}],\"name\":\"batchTransferLowerFailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deprecatedDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"addresspayable\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"directTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"addresspayable\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"directTransferFail\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"failReasonWithStr\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"paramChange\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"systemTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"unexpectedPackage\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"validatorEmptyJailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorFelony\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"validatorJailed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"validatorMisdemeanor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"validatorSetUpdated\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"BIND_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CODE_OK\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"CROSS_CHAIN_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"DUSTY_INCOMING\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_FAIL_CHECK_VALIDATORS\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_FAIL_DECODE\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_LEN_OF_VAL_MISMATCH\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_RELAYFEE_TOO_LARGE\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ERROR_UNKNOWN_PACKAGE_TYPE\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"EXPIRE_TIME_SECOND_GAP\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"GOV_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"GOV_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INCENTIVIZE_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"INIT_VALIDATORSET_BYTES\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"JAIL_MESSAGE_TYPE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"LIGHT_CLIENT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"PRECISION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"RELAYERHUB_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SLASH_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SLASH_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"STAKING_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SYSTEM_REWARD_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOKEN_HUB_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOKEN_MANAGER_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_IN_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TRANSFER_OUT_CHANNELID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VALIDATORS_UPDATE_MESSAGE_TYPE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VALIDATOR_CONTRACT_ADDR\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"alreadyInit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"bscChainID\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"currentValidatorSet\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"consensusAddress\",\"type\":\"address\"},{\"internalType\":\"addresspayable\",\"name\":\"feeAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"BBCFeeAddress\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"votingPower\",\"type\":\"uint64\"},{\"internalType\":\"bool\",\"name\":\"jailed\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"incoming\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"currentValidatorSetMap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"valAddr\",\"type\":\"address\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"expireTimeSecondGap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"felony\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"getIncoming\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleAckPackage\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"channelId\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleFailAckPackage\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"bytes\",\"name\":\"msgBytes\",\"type\":\"bytes\"}],\"name\":\"handleSynPackage\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"responsePayload\",\"type\":\"bytes\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"init\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"misdemeanor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalInComing\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"key\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"updateParam\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
 
 // Bscvalidatorset is an auto generated Go binding around an Ethereum contract.
 type Bscvalidatorset struct {
@@ -172,361 +172,966 @@ func (_Bscvalidatorset *BscvalidatorsetTransactorRaw) Transact(opts *bind.Transa
 	return _Bscvalidatorset.Contract.contract.Transact(opts, method, params...)
 }
 
-// CHANNELID is a paid mutator transaction binding the contract method 0xb0c0c514.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function CHANNEL_ID() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) CHANNELID(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "CHANNEL_ID")
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) BINDCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "BIND_CHANNELID")
+	return *ret0, err
 }
 
-// CHANNELID is a paid mutator transaction binding the contract method 0xb0c0c514.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function CHANNEL_ID() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetSession) CHANNELID() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.CHANNELID(&_Bscvalidatorset.TransactOpts)
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) BINDCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.BINDCHANNELID(&_Bscvalidatorset.CallOpts)
 }
 
-// CHANNELID is a paid mutator transaction binding the contract method 0xb0c0c514.
+// BINDCHANNELID is a free data retrieval call binding the contract method 0x3dffc387.
 //
-// Solidity: function CHANNEL_ID() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) CHANNELID() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.CHANNELID(&_Bscvalidatorset.TransactOpts)
+// Solidity: function BIND_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) BINDCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.BINDCHANNELID(&_Bscvalidatorset.CallOpts)
 }
 
-// DUSTYINCOMING is a paid mutator transaction binding the contract method 0xd86222d5.
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
 //
-// Solidity: function DUSTY_INCOMING() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) DUSTYINCOMING(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "DUSTY_INCOMING")
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) CODEOK(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "CODE_OK")
+	return *ret0, err
 }
 
-// DUSTYINCOMING is a paid mutator transaction binding the contract method 0xd86222d5.
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
 //
-// Solidity: function DUSTY_INCOMING() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) DUSTYINCOMING() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.DUSTYINCOMING(&_Bscvalidatorset.TransactOpts)
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) CODEOK() (uint32, error) {
+	return _Bscvalidatorset.Contract.CODEOK(&_Bscvalidatorset.CallOpts)
 }
 
-// DUSTYINCOMING is a paid mutator transaction binding the contract method 0xd86222d5.
+// CODEOK is a free data retrieval call binding the contract method 0xab51bb96.
 //
-// Solidity: function DUSTY_INCOMING() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) DUSTYINCOMING() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.DUSTYINCOMING(&_Bscvalidatorset.TransactOpts)
+// Solidity: function CODE_OK() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) CODEOK() (uint32, error) {
+	return _Bscvalidatorset.Contract.CODEOK(&_Bscvalidatorset.CallOpts)
 }
 
-// EXTRAFEE is a paid mutator transaction binding the contract method 0x6a65855e.
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
 //
-// Solidity: function EXTRA_FEE() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) EXTRAFEE(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "EXTRA_FEE")
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) CROSSCHAINCONTRACTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "CROSS_CHAIN_CONTRACT_ADDR")
+	return *ret0, err
 }
 
-// EXTRAFEE is a paid mutator transaction binding the contract method 0x6a65855e.
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
 //
-// Solidity: function EXTRA_FEE() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) EXTRAFEE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.EXTRAFEE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) CROSSCHAINCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.CROSSCHAINCONTRACTADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// EXTRAFEE is a paid mutator transaction binding the contract method 0x6a65855e.
+// CROSSCHAINCONTRACTADDR is a free data retrieval call binding the contract method 0x51e80672.
 //
-// Solidity: function EXTRA_FEE() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) EXTRAFEE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.EXTRAFEE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function CROSS_CHAIN_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) CROSSCHAINCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.CROSSCHAINCONTRACTADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// GOVHUBADDR is a paid mutator transaction binding the contract method 0x9dc09262.
+// DUSTYINCOMING is a free data retrieval call binding the contract method 0xd86222d5.
 //
-// Solidity: function GOV_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) GOVHUBADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "GOV_HUB_ADDR")
+// Solidity: function DUSTY_INCOMING() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) DUSTYINCOMING(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "DUSTY_INCOMING")
+	return *ret0, err
 }
 
-// GOVHUBADDR is a paid mutator transaction binding the contract method 0x9dc09262.
+// DUSTYINCOMING is a free data retrieval call binding the contract method 0xd86222d5.
 //
-// Solidity: function GOV_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) GOVHUBADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GOVHUBADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function DUSTY_INCOMING() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) DUSTYINCOMING() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.DUSTYINCOMING(&_Bscvalidatorset.CallOpts)
 }
 
-// GOVHUBADDR is a paid mutator transaction binding the contract method 0x9dc09262.
+// DUSTYINCOMING is a free data retrieval call binding the contract method 0xd86222d5.
 //
-// Solidity: function GOV_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) GOVHUBADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GOVHUBADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function DUSTY_INCOMING() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) DUSTYINCOMING() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.DUSTYINCOMING(&_Bscvalidatorset.CallOpts)
 }
 
-// INCENTIVIZEADDR is a paid mutator transaction binding the contract method 0x6e47b482.
+// ERRORFAILCHECKVALIDATORS is a free data retrieval call binding the contract method 0x81650b62.
 //
-// Solidity: function INCENTIVIZE_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) INCENTIVIZEADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "INCENTIVIZE_ADDR")
+// Solidity: function ERROR_FAIL_CHECK_VALIDATORS() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ERRORFAILCHECKVALIDATORS(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "ERROR_FAIL_CHECK_VALIDATORS")
+	return *ret0, err
 }
 
-// INCENTIVIZEADDR is a paid mutator transaction binding the contract method 0x6e47b482.
+// ERRORFAILCHECKVALIDATORS is a free data retrieval call binding the contract method 0x81650b62.
 //
-// Solidity: function INCENTIVIZE_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) INCENTIVIZEADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.INCENTIVIZEADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_FAIL_CHECK_VALIDATORS() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) ERRORFAILCHECKVALIDATORS() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORFAILCHECKVALIDATORS(&_Bscvalidatorset.CallOpts)
 }
 
-// INCENTIVIZEADDR is a paid mutator transaction binding the contract method 0x6e47b482.
+// ERRORFAILCHECKVALIDATORS is a free data retrieval call binding the contract method 0x81650b62.
 //
-// Solidity: function INCENTIVIZE_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) INCENTIVIZEADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.INCENTIVIZEADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_FAIL_CHECK_VALIDATORS() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ERRORFAILCHECKVALIDATORS() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORFAILCHECKVALIDATORS(&_Bscvalidatorset.CallOpts)
 }
 
-// INITVALIDATORSETBYTES is a paid mutator transaction binding the contract method 0xa5422d5c.
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
 //
-// Solidity: function INIT_VALIDATORSET_BYTES() returns(bytes)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) INITVALIDATORSETBYTES(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "INIT_VALIDATORSET_BYTES")
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ERRORFAILDECODE(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "ERROR_FAIL_DECODE")
+	return *ret0, err
 }
 
-// INITVALIDATORSETBYTES is a paid mutator transaction binding the contract method 0xa5422d5c.
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
 //
-// Solidity: function INIT_VALIDATORSET_BYTES() returns(bytes)
-func (_Bscvalidatorset *BscvalidatorsetSession) INITVALIDATORSETBYTES() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.INITVALIDATORSETBYTES(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) ERRORFAILDECODE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORFAILDECODE(&_Bscvalidatorset.CallOpts)
 }
 
-// INITVALIDATORSETBYTES is a paid mutator transaction binding the contract method 0xa5422d5c.
+// ERRORFAILDECODE is a free data retrieval call binding the contract method 0x0bee7a67.
 //
-// Solidity: function INIT_VALIDATORSET_BYTES() returns(bytes)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) INITVALIDATORSETBYTES() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.INITVALIDATORSETBYTES(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_FAIL_DECODE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ERRORFAILDECODE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORFAILDECODE(&_Bscvalidatorset.CallOpts)
 }
 
-// JAILMESSAGETYPE is a paid mutator transaction binding the contract method 0xbf9f4995.
+// ERRORLENOFVALMISMATCH is a free data retrieval call binding the contract method 0x5d77156c.
 //
-// Solidity: function JAIL_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) JAILMESSAGETYPE(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "JAIL_MESSAGE_TYPE")
+// Solidity: function ERROR_LEN_OF_VAL_MISMATCH() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ERRORLENOFVALMISMATCH(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "ERROR_LEN_OF_VAL_MISMATCH")
+	return *ret0, err
 }
 
-// JAILMESSAGETYPE is a paid mutator transaction binding the contract method 0xbf9f4995.
+// ERRORLENOFVALMISMATCH is a free data retrieval call binding the contract method 0x5d77156c.
 //
-// Solidity: function JAIL_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetSession) JAILMESSAGETYPE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.JAILMESSAGETYPE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_LEN_OF_VAL_MISMATCH() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) ERRORLENOFVALMISMATCH() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORLENOFVALMISMATCH(&_Bscvalidatorset.CallOpts)
 }
 
-// JAILMESSAGETYPE is a paid mutator transaction binding the contract method 0xbf9f4995.
+// ERRORLENOFVALMISMATCH is a free data retrieval call binding the contract method 0x5d77156c.
 //
-// Solidity: function JAIL_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) JAILMESSAGETYPE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.JAILMESSAGETYPE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_LEN_OF_VAL_MISMATCH() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ERRORLENOFVALMISMATCH() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORLENOFVALMISMATCH(&_Bscvalidatorset.CallOpts)
 }
 
-// LIGHTCLIENTADDR is a paid mutator transaction binding the contract method 0xdc927faf.
+// ERRORRELAYFEETOOLARGE is a free data retrieval call binding the contract method 0x219f22d5.
 //
-// Solidity: function LIGHT_CLIENT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) LIGHTCLIENTADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "LIGHT_CLIENT_ADDR")
+// Solidity: function ERROR_RELAYFEE_TOO_LARGE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ERRORRELAYFEETOOLARGE(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "ERROR_RELAYFEE_TOO_LARGE")
+	return *ret0, err
 }
 
-// LIGHTCLIENTADDR is a paid mutator transaction binding the contract method 0xdc927faf.
+// ERRORRELAYFEETOOLARGE is a free data retrieval call binding the contract method 0x219f22d5.
 //
-// Solidity: function LIGHT_CLIENT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) LIGHTCLIENTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.LIGHTCLIENTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_RELAYFEE_TOO_LARGE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) ERRORRELAYFEETOOLARGE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORRELAYFEETOOLARGE(&_Bscvalidatorset.CallOpts)
 }
 
-// LIGHTCLIENTADDR is a paid mutator transaction binding the contract method 0xdc927faf.
+// ERRORRELAYFEETOOLARGE is a free data retrieval call binding the contract method 0x219f22d5.
 //
-// Solidity: function LIGHT_CLIENT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) LIGHTCLIENTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.LIGHTCLIENTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_RELAYFEE_TOO_LARGE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ERRORRELAYFEETOOLARGE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORRELAYFEETOOLARGE(&_Bscvalidatorset.CallOpts)
 }
 
-// RELAYERHUBCONTRACTADDR is a paid mutator transaction binding the contract method 0xa1a11bf5.
+// ERRORUNKNOWNPACKAGETYPE is a free data retrieval call binding the contract method 0xeda5868c.
 //
-// Solidity: function RELAYERHUB_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) RELAYERHUBCONTRACTADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "RELAYERHUB_CONTRACT_ADDR")
+// Solidity: function ERROR_UNKNOWN_PACKAGE_TYPE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ERRORUNKNOWNPACKAGETYPE(opts *bind.CallOpts) (uint32, error) {
+	var (
+		ret0 = new(uint32)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "ERROR_UNKNOWN_PACKAGE_TYPE")
+	return *ret0, err
 }
 
-// RELAYERHUBCONTRACTADDR is a paid mutator transaction binding the contract method 0xa1a11bf5.
+// ERRORUNKNOWNPACKAGETYPE is a free data retrieval call binding the contract method 0xeda5868c.
 //
-// Solidity: function RELAYERHUB_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) RELAYERHUBCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RELAYERHUBCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_UNKNOWN_PACKAGE_TYPE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetSession) ERRORUNKNOWNPACKAGETYPE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORUNKNOWNPACKAGETYPE(&_Bscvalidatorset.CallOpts)
 }
 
-// RELAYERHUBCONTRACTADDR is a paid mutator transaction binding the contract method 0xa1a11bf5.
+// ERRORUNKNOWNPACKAGETYPE is a free data retrieval call binding the contract method 0xeda5868c.
 //
-// Solidity: function RELAYERHUB_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) RELAYERHUBCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RELAYERHUBCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function ERROR_UNKNOWN_PACKAGE_TYPE() constant returns(uint32)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ERRORUNKNOWNPACKAGETYPE() (uint32, error) {
+	return _Bscvalidatorset.Contract.ERRORUNKNOWNPACKAGETYPE(&_Bscvalidatorset.CallOpts)
 }
 
-// RELAYERREWARD is a paid mutator transaction binding the contract method 0x75405d0d.
+// EXPIRETIMESECONDGAP is a free data retrieval call binding the contract method 0x853230aa.
 //
-// Solidity: function RELAYER_REWARD() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) RELAYERREWARD(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "RELAYER_REWARD")
+// Solidity: function EXPIRE_TIME_SECOND_GAP() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) EXPIRETIMESECONDGAP(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "EXPIRE_TIME_SECOND_GAP")
+	return *ret0, err
 }
 
-// RELAYERREWARD is a paid mutator transaction binding the contract method 0x75405d0d.
+// EXPIRETIMESECONDGAP is a free data retrieval call binding the contract method 0x853230aa.
 //
-// Solidity: function RELAYER_REWARD() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) RELAYERREWARD() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RELAYERREWARD(&_Bscvalidatorset.TransactOpts)
+// Solidity: function EXPIRE_TIME_SECOND_GAP() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) EXPIRETIMESECONDGAP() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.EXPIRETIMESECONDGAP(&_Bscvalidatorset.CallOpts)
 }
 
-// RELAYERREWARD is a paid mutator transaction binding the contract method 0x75405d0d.
+// EXPIRETIMESECONDGAP is a free data retrieval call binding the contract method 0x853230aa.
 //
-// Solidity: function RELAYER_REWARD() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) RELAYERREWARD() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RELAYERREWARD(&_Bscvalidatorset.TransactOpts)
+// Solidity: function EXPIRE_TIME_SECOND_GAP() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) EXPIRETIMESECONDGAP() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.EXPIRETIMESECONDGAP(&_Bscvalidatorset.CallOpts)
 }
 
-// SLASHCONTRACTADDR is a paid mutator transaction binding the contract method 0x43756e5c.
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
 //
-// Solidity: function SLASH_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) SLASHCONTRACTADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "SLASH_CONTRACT_ADDR")
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) GOVCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "GOV_CHANNELID")
+	return *ret0, err
 }
 
-// SLASHCONTRACTADDR is a paid mutator transaction binding the contract method 0x43756e5c.
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
 //
-// Solidity: function SLASH_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) SLASHCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.SLASHCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) GOVCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.GOVCHANNELID(&_Bscvalidatorset.CallOpts)
 }
 
-// SLASHCONTRACTADDR is a paid mutator transaction binding the contract method 0x43756e5c.
+// GOVCHANNELID is a free data retrieval call binding the contract method 0x96713da9.
 //
-// Solidity: function SLASH_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) SLASHCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.SLASHCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function GOV_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) GOVCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.GOVCHANNELID(&_Bscvalidatorset.CallOpts)
 }
 
-// SYSTEMREWARDADDR is a paid mutator transaction binding the contract method 0xc81b1662.
+// GOVHUBADDR is a free data retrieval call binding the contract method 0x9dc09262.
 //
-// Solidity: function SYSTEM_REWARD_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) SYSTEMREWARDADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "SYSTEM_REWARD_ADDR")
+// Solidity: function GOV_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) GOVHUBADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "GOV_HUB_ADDR")
+	return *ret0, err
 }
 
-// SYSTEMREWARDADDR is a paid mutator transaction binding the contract method 0xc81b1662.
+// GOVHUBADDR is a free data retrieval call binding the contract method 0x9dc09262.
 //
-// Solidity: function SYSTEM_REWARD_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) SYSTEMREWARDADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.SYSTEMREWARDADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function GOV_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) GOVHUBADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.GOVHUBADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// SYSTEMREWARDADDR is a paid mutator transaction binding the contract method 0xc81b1662.
+// GOVHUBADDR is a free data retrieval call binding the contract method 0x9dc09262.
 //
-// Solidity: function SYSTEM_REWARD_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) SYSTEMREWARDADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.SYSTEMREWARDADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function GOV_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) GOVHUBADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.GOVHUBADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// TOKENHUBADDR is a paid mutator transaction binding the contract method 0xfd6a6879.
+// INCENTIVIZEADDR is a free data retrieval call binding the contract method 0x6e47b482.
 //
-// Solidity: function TOKEN_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) TOKENHUBADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "TOKEN_HUB_ADDR")
+// Solidity: function INCENTIVIZE_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) INCENTIVIZEADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "INCENTIVIZE_ADDR")
+	return *ret0, err
 }
 
-// TOKENHUBADDR is a paid mutator transaction binding the contract method 0xfd6a6879.
+// INCENTIVIZEADDR is a free data retrieval call binding the contract method 0x6e47b482.
 //
-// Solidity: function TOKEN_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) TOKENHUBADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.TOKENHUBADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function INCENTIVIZE_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) INCENTIVIZEADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.INCENTIVIZEADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// TOKENHUBADDR is a paid mutator transaction binding the contract method 0xfd6a6879.
+// INCENTIVIZEADDR is a free data retrieval call binding the contract method 0x6e47b482.
 //
-// Solidity: function TOKEN_HUB_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) TOKENHUBADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.TOKENHUBADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function INCENTIVIZE_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) INCENTIVIZEADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.INCENTIVIZEADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// VALIDATORSUPDATEMESSAGETYPE is a paid mutator transaction binding the contract method 0x5667515a.
+// INITVALIDATORSETBYTES is a free data retrieval call binding the contract method 0xa5422d5c.
 //
-// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) VALIDATORSUPDATEMESSAGETYPE(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "VALIDATORS_UPDATE_MESSAGE_TYPE")
+// Solidity: function INIT_VALIDATORSET_BYTES() constant returns(bytes)
+func (_Bscvalidatorset *BscvalidatorsetCaller) INITVALIDATORSETBYTES(opts *bind.CallOpts) ([]byte, error) {
+	var (
+		ret0 = new([]byte)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "INIT_VALIDATORSET_BYTES")
+	return *ret0, err
 }
 
-// VALIDATORSUPDATEMESSAGETYPE is a paid mutator transaction binding the contract method 0x5667515a.
+// INITVALIDATORSETBYTES is a free data retrieval call binding the contract method 0xa5422d5c.
 //
-// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetSession) VALIDATORSUPDATEMESSAGETYPE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.VALIDATORSUPDATEMESSAGETYPE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function INIT_VALIDATORSET_BYTES() constant returns(bytes)
+func (_Bscvalidatorset *BscvalidatorsetSession) INITVALIDATORSETBYTES() ([]byte, error) {
+	return _Bscvalidatorset.Contract.INITVALIDATORSETBYTES(&_Bscvalidatorset.CallOpts)
 }
 
-// VALIDATORSUPDATEMESSAGETYPE is a paid mutator transaction binding the contract method 0x5667515a.
+// INITVALIDATORSETBYTES is a free data retrieval call binding the contract method 0xa5422d5c.
 //
-// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() returns(uint8)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) VALIDATORSUPDATEMESSAGETYPE() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.VALIDATORSUPDATEMESSAGETYPE(&_Bscvalidatorset.TransactOpts)
+// Solidity: function INIT_VALIDATORSET_BYTES() constant returns(bytes)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) INITVALIDATORSETBYTES() ([]byte, error) {
+	return _Bscvalidatorset.Contract.INITVALIDATORSETBYTES(&_Bscvalidatorset.CallOpts)
 }
 
-// VALIDATORCONTRACTADDR is a paid mutator transaction binding the contract method 0xf9a2bbc7.
+// JAILMESSAGETYPE is a free data retrieval call binding the contract method 0xbf9f4995.
 //
-// Solidity: function VALIDATOR_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) VALIDATORCONTRACTADDR(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "VALIDATOR_CONTRACT_ADDR")
+// Solidity: function JAIL_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) JAILMESSAGETYPE(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "JAIL_MESSAGE_TYPE")
+	return *ret0, err
 }
 
-// VALIDATORCONTRACTADDR is a paid mutator transaction binding the contract method 0xf9a2bbc7.
+// JAILMESSAGETYPE is a free data retrieval call binding the contract method 0xbf9f4995.
 //
-// Solidity: function VALIDATOR_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetSession) VALIDATORCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.VALIDATORCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function JAIL_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) JAILMESSAGETYPE() (uint8, error) {
+	return _Bscvalidatorset.Contract.JAILMESSAGETYPE(&_Bscvalidatorset.CallOpts)
 }
 
-// VALIDATORCONTRACTADDR is a paid mutator transaction binding the contract method 0xf9a2bbc7.
+// JAILMESSAGETYPE is a free data retrieval call binding the contract method 0xbf9f4995.
 //
-// Solidity: function VALIDATOR_CONTRACT_ADDR() returns(address)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) VALIDATORCONTRACTADDR() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.VALIDATORCONTRACTADDR(&_Bscvalidatorset.TransactOpts)
+// Solidity: function JAIL_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) JAILMESSAGETYPE() (uint8, error) {
+	return _Bscvalidatorset.Contract.JAILMESSAGETYPE(&_Bscvalidatorset.CallOpts)
 }
 
-// AlreadyInit is a paid mutator transaction binding the contract method 0xa78abc16.
+// LIGHTCLIENTADDR is a free data retrieval call binding the contract method 0xdc927faf.
 //
-// Solidity: function alreadyInit() returns(bool)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) AlreadyInit(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "alreadyInit")
+// Solidity: function LIGHT_CLIENT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) LIGHTCLIENTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "LIGHT_CLIENT_ADDR")
+	return *ret0, err
 }
 
-// AlreadyInit is a paid mutator transaction binding the contract method 0xa78abc16.
+// LIGHTCLIENTADDR is a free data retrieval call binding the contract method 0xdc927faf.
 //
-// Solidity: function alreadyInit() returns(bool)
-func (_Bscvalidatorset *BscvalidatorsetSession) AlreadyInit() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.AlreadyInit(&_Bscvalidatorset.TransactOpts)
+// Solidity: function LIGHT_CLIENT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) LIGHTCLIENTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.LIGHTCLIENTADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// AlreadyInit is a paid mutator transaction binding the contract method 0xa78abc16.
+// LIGHTCLIENTADDR is a free data retrieval call binding the contract method 0xdc927faf.
 //
-// Solidity: function alreadyInit() returns(bool)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) AlreadyInit() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.AlreadyInit(&_Bscvalidatorset.TransactOpts)
+// Solidity: function LIGHT_CLIENT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) LIGHTCLIENTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.LIGHTCLIENTADDR(&_Bscvalidatorset.CallOpts)
 }
 
-// CurrentValidatorSet is a paid mutator transaction binding the contract method 0x6969a25c.
+// PRECISION is a free data retrieval call binding the contract method 0xaaf5eb68.
 //
-// Solidity: function currentValidatorSet(uint256 ) returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) CurrentValidatorSet(opts *bind.TransactOpts, arg0 *big.Int) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "currentValidatorSet", arg0)
+// Solidity: function PRECISION() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) PRECISION(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "PRECISION")
+	return *ret0, err
 }
 
-// CurrentValidatorSet is a paid mutator transaction binding the contract method 0x6969a25c.
+// PRECISION is a free data retrieval call binding the contract method 0xaaf5eb68.
 //
-// Solidity: function currentValidatorSet(uint256 ) returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
-func (_Bscvalidatorset *BscvalidatorsetSession) CurrentValidatorSet(arg0 *big.Int) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.CurrentValidatorSet(&_Bscvalidatorset.TransactOpts, arg0)
+// Solidity: function PRECISION() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) PRECISION() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.PRECISION(&_Bscvalidatorset.CallOpts)
 }
 
-// CurrentValidatorSet is a paid mutator transaction binding the contract method 0x6969a25c.
+// PRECISION is a free data retrieval call binding the contract method 0xaaf5eb68.
 //
-// Solidity: function currentValidatorSet(uint256 ) returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) CurrentValidatorSet(arg0 *big.Int) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.CurrentValidatorSet(&_Bscvalidatorset.TransactOpts, arg0)
+// Solidity: function PRECISION() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) PRECISION() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.PRECISION(&_Bscvalidatorset.CallOpts)
+}
+
+// RELAYERHUBCONTRACTADDR is a free data retrieval call binding the contract method 0xa1a11bf5.
+//
+// Solidity: function RELAYERHUB_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) RELAYERHUBCONTRACTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "RELAYERHUB_CONTRACT_ADDR")
+	return *ret0, err
+}
+
+// RELAYERHUBCONTRACTADDR is a free data retrieval call binding the contract method 0xa1a11bf5.
+//
+// Solidity: function RELAYERHUB_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) RELAYERHUBCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.RELAYERHUBCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// RELAYERHUBCONTRACTADDR is a free data retrieval call binding the contract method 0xa1a11bf5.
+//
+// Solidity: function RELAYERHUB_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) RELAYERHUBCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.RELAYERHUBCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
+//
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) SLASHCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "SLASH_CHANNELID")
+	return *ret0, err
+}
+
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
+//
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) SLASHCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.SLASHCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// SLASHCHANNELID is a free data retrieval call binding the contract method 0x7942fd05.
+//
+// Solidity: function SLASH_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) SLASHCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.SLASHCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// SLASHCONTRACTADDR is a free data retrieval call binding the contract method 0x43756e5c.
+//
+// Solidity: function SLASH_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) SLASHCONTRACTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "SLASH_CONTRACT_ADDR")
+	return *ret0, err
+}
+
+// SLASHCONTRACTADDR is a free data retrieval call binding the contract method 0x43756e5c.
+//
+// Solidity: function SLASH_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) SLASHCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.SLASHCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// SLASHCONTRACTADDR is a free data retrieval call binding the contract method 0x43756e5c.
+//
+// Solidity: function SLASH_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) SLASHCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.SLASHCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) STAKINGCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "STAKING_CHANNELID")
+	return *ret0, err
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) STAKINGCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.STAKINGCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// STAKINGCHANNELID is a free data retrieval call binding the contract method 0x4bf6c882.
+//
+// Solidity: function STAKING_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) STAKINGCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.STAKINGCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// SYSTEMREWARDADDR is a free data retrieval call binding the contract method 0xc81b1662.
+//
+// Solidity: function SYSTEM_REWARD_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) SYSTEMREWARDADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "SYSTEM_REWARD_ADDR")
+	return *ret0, err
+}
+
+// SYSTEMREWARDADDR is a free data retrieval call binding the contract method 0xc81b1662.
+//
+// Solidity: function SYSTEM_REWARD_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) SYSTEMREWARDADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.SYSTEMREWARDADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// SYSTEMREWARDADDR is a free data retrieval call binding the contract method 0xc81b1662.
+//
+// Solidity: function SYSTEM_REWARD_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) SYSTEMREWARDADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.SYSTEMREWARDADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// TOKENHUBADDR is a free data retrieval call binding the contract method 0xfd6a6879.
+//
+// Solidity: function TOKEN_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) TOKENHUBADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "TOKEN_HUB_ADDR")
+	return *ret0, err
+}
+
+// TOKENHUBADDR is a free data retrieval call binding the contract method 0xfd6a6879.
+//
+// Solidity: function TOKEN_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) TOKENHUBADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.TOKENHUBADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// TOKENHUBADDR is a free data retrieval call binding the contract method 0xfd6a6879.
+//
+// Solidity: function TOKEN_HUB_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) TOKENHUBADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.TOKENHUBADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
+//
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) TOKENMANAGERADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "TOKEN_MANAGER_ADDR")
+	return *ret0, err
+}
+
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
+//
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) TOKENMANAGERADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.TOKENMANAGERADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// TOKENMANAGERADDR is a free data retrieval call binding the contract method 0x75d47a0a.
+//
+// Solidity: function TOKEN_MANAGER_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) TOKENMANAGERADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.TOKENMANAGERADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
+//
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) TRANSFERINCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "TRANSFER_IN_CHANNELID")
+	return *ret0, err
+}
+
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
+//
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) TRANSFERINCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.TRANSFERINCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// TRANSFERINCHANNELID is a free data retrieval call binding the contract method 0x70fd5bad.
+//
+// Solidity: function TRANSFER_IN_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) TRANSFERINCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.TRANSFERINCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) TRANSFEROUTCHANNELID(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "TRANSFER_OUT_CHANNELID")
+	return *ret0, err
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) TRANSFEROUTCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.TRANSFEROUTCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// TRANSFEROUTCHANNELID is a free data retrieval call binding the contract method 0xfc3e5908.
+//
+// Solidity: function TRANSFER_OUT_CHANNELID() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) TRANSFEROUTCHANNELID() (uint8, error) {
+	return _Bscvalidatorset.Contract.TRANSFEROUTCHANNELID(&_Bscvalidatorset.CallOpts)
+}
+
+// VALIDATORSUPDATEMESSAGETYPE is a free data retrieval call binding the contract method 0x5667515a.
+//
+// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCaller) VALIDATORSUPDATEMESSAGETYPE(opts *bind.CallOpts) (uint8, error) {
+	var (
+		ret0 = new(uint8)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "VALIDATORS_UPDATE_MESSAGE_TYPE")
+	return *ret0, err
+}
+
+// VALIDATORSUPDATEMESSAGETYPE is a free data retrieval call binding the contract method 0x5667515a.
+//
+// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetSession) VALIDATORSUPDATEMESSAGETYPE() (uint8, error) {
+	return _Bscvalidatorset.Contract.VALIDATORSUPDATEMESSAGETYPE(&_Bscvalidatorset.CallOpts)
+}
+
+// VALIDATORSUPDATEMESSAGETYPE is a free data retrieval call binding the contract method 0x5667515a.
+//
+// Solidity: function VALIDATORS_UPDATE_MESSAGE_TYPE() constant returns(uint8)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) VALIDATORSUPDATEMESSAGETYPE() (uint8, error) {
+	return _Bscvalidatorset.Contract.VALIDATORSUPDATEMESSAGETYPE(&_Bscvalidatorset.CallOpts)
+}
+
+// VALIDATORCONTRACTADDR is a free data retrieval call binding the contract method 0xf9a2bbc7.
+//
+// Solidity: function VALIDATOR_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCaller) VALIDATORCONTRACTADDR(opts *bind.CallOpts) (common.Address, error) {
+	var (
+		ret0 = new(common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "VALIDATOR_CONTRACT_ADDR")
+	return *ret0, err
+}
+
+// VALIDATORCONTRACTADDR is a free data retrieval call binding the contract method 0xf9a2bbc7.
+//
+// Solidity: function VALIDATOR_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetSession) VALIDATORCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.VALIDATORCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// VALIDATORCONTRACTADDR is a free data retrieval call binding the contract method 0xf9a2bbc7.
+//
+// Solidity: function VALIDATOR_CONTRACT_ADDR() constant returns(address)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) VALIDATORCONTRACTADDR() (common.Address, error) {
+	return _Bscvalidatorset.Contract.VALIDATORCONTRACTADDR(&_Bscvalidatorset.CallOpts)
+}
+
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
+//
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Bscvalidatorset *BscvalidatorsetCaller) AlreadyInit(opts *bind.CallOpts) (bool, error) {
+	var (
+		ret0 = new(bool)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "alreadyInit")
+	return *ret0, err
+}
+
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
+//
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Bscvalidatorset *BscvalidatorsetSession) AlreadyInit() (bool, error) {
+	return _Bscvalidatorset.Contract.AlreadyInit(&_Bscvalidatorset.CallOpts)
+}
+
+// AlreadyInit is a free data retrieval call binding the contract method 0xa78abc16.
+//
+// Solidity: function alreadyInit() constant returns(bool)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) AlreadyInit() (bool, error) {
+	return _Bscvalidatorset.Contract.AlreadyInit(&_Bscvalidatorset.CallOpts)
+}
+
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
+//
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Bscvalidatorset *BscvalidatorsetCaller) BscChainID(opts *bind.CallOpts) (uint16, error) {
+	var (
+		ret0 = new(uint16)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "bscChainID")
+	return *ret0, err
+}
+
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
+//
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Bscvalidatorset *BscvalidatorsetSession) BscChainID() (uint16, error) {
+	return _Bscvalidatorset.Contract.BscChainID(&_Bscvalidatorset.CallOpts)
+}
+
+// BscChainID is a free data retrieval call binding the contract method 0x493279b1.
+//
+// Solidity: function bscChainID() constant returns(uint16)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) BscChainID() (uint16, error) {
+	return _Bscvalidatorset.Contract.BscChainID(&_Bscvalidatorset.CallOpts)
+}
+
+// CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
+//
+// Solidity: function currentValidatorSet(uint256 ) constant returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
+func (_Bscvalidatorset *BscvalidatorsetCaller) CurrentValidatorSet(opts *bind.CallOpts, arg0 *big.Int) (struct {
+	ConsensusAddress common.Address
+	FeeAddress       common.Address
+	BBCFeeAddress    common.Address
+	VotingPower      uint64
+	Jailed           bool
+	Incoming         *big.Int
+}, error) {
+	ret := new(struct {
+		ConsensusAddress common.Address
+		FeeAddress       common.Address
+		BBCFeeAddress    common.Address
+		VotingPower      uint64
+		Jailed           bool
+		Incoming         *big.Int
+	})
+	out := ret
+	err := _Bscvalidatorset.contract.Call(opts, out, "currentValidatorSet", arg0)
+	return *ret, err
+}
+
+// CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
+//
+// Solidity: function currentValidatorSet(uint256 ) constant returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
+func (_Bscvalidatorset *BscvalidatorsetSession) CurrentValidatorSet(arg0 *big.Int) (struct {
+	ConsensusAddress common.Address
+	FeeAddress       common.Address
+	BBCFeeAddress    common.Address
+	VotingPower      uint64
+	Jailed           bool
+	Incoming         *big.Int
+}, error) {
+	return _Bscvalidatorset.Contract.CurrentValidatorSet(&_Bscvalidatorset.CallOpts, arg0)
+}
+
+// CurrentValidatorSet is a free data retrieval call binding the contract method 0x6969a25c.
+//
+// Solidity: function currentValidatorSet(uint256 ) constant returns(address consensusAddress, address feeAddress, address BBCFeeAddress, uint64 votingPower, bool jailed, uint256 incoming)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) CurrentValidatorSet(arg0 *big.Int) (struct {
+	ConsensusAddress common.Address
+	FeeAddress       common.Address
+	BBCFeeAddress    common.Address
+	VotingPower      uint64
+	Jailed           bool
+	Incoming         *big.Int
+}, error) {
+	return _Bscvalidatorset.Contract.CurrentValidatorSet(&_Bscvalidatorset.CallOpts, arg0)
+}
+
+// CurrentValidatorSetMap is a free data retrieval call binding the contract method 0xad3c9da6.
+//
+// Solidity: function currentValidatorSetMap(address ) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) CurrentValidatorSetMap(opts *bind.CallOpts, arg0 common.Address) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "currentValidatorSetMap", arg0)
+	return *ret0, err
+}
+
+// CurrentValidatorSetMap is a free data retrieval call binding the contract method 0xad3c9da6.
+//
+// Solidity: function currentValidatorSetMap(address ) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) CurrentValidatorSetMap(arg0 common.Address) (*big.Int, error) {
+	return _Bscvalidatorset.Contract.CurrentValidatorSetMap(&_Bscvalidatorset.CallOpts, arg0)
+}
+
+// CurrentValidatorSetMap is a free data retrieval call binding the contract method 0xad3c9da6.
+//
+// Solidity: function currentValidatorSetMap(address ) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) CurrentValidatorSetMap(arg0 common.Address) (*big.Int, error) {
+	return _Bscvalidatorset.Contract.CurrentValidatorSetMap(&_Bscvalidatorset.CallOpts, arg0)
+}
+
+// ExpireTimeSecondGap is a free data retrieval call binding the contract method 0x86249882.
+//
+// Solidity: function expireTimeSecondGap() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) ExpireTimeSecondGap(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "expireTimeSecondGap")
+	return *ret0, err
+}
+
+// ExpireTimeSecondGap is a free data retrieval call binding the contract method 0x86249882.
+//
+// Solidity: function expireTimeSecondGap() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) ExpireTimeSecondGap() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.ExpireTimeSecondGap(&_Bscvalidatorset.CallOpts)
+}
+
+// ExpireTimeSecondGap is a free data retrieval call binding the contract method 0x86249882.
+//
+// Solidity: function expireTimeSecondGap() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) ExpireTimeSecondGap() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.ExpireTimeSecondGap(&_Bscvalidatorset.CallOpts)
+}
+
+// GetIncoming is a free data retrieval call binding the contract method 0x565c56b3.
+//
+// Solidity: function getIncoming(address validator) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) GetIncoming(opts *bind.CallOpts, validator common.Address) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "getIncoming", validator)
+	return *ret0, err
+}
+
+// GetIncoming is a free data retrieval call binding the contract method 0x565c56b3.
+//
+// Solidity: function getIncoming(address validator) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) GetIncoming(validator common.Address) (*big.Int, error) {
+	return _Bscvalidatorset.Contract.GetIncoming(&_Bscvalidatorset.CallOpts, validator)
+}
+
+// GetIncoming is a free data retrieval call binding the contract method 0x565c56b3.
+//
+// Solidity: function getIncoming(address validator) constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) GetIncoming(validator common.Address) (*big.Int, error) {
+	return _Bscvalidatorset.Contract.GetIncoming(&_Bscvalidatorset.CallOpts, validator)
+}
+
+// GetValidators is a free data retrieval call binding the contract method 0xb7ab4db5.
+//
+// Solidity: function getValidators() constant returns(address[])
+func (_Bscvalidatorset *BscvalidatorsetCaller) GetValidators(opts *bind.CallOpts) ([]common.Address, error) {
+	var (
+		ret0 = new([]common.Address)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "getValidators")
+	return *ret0, err
+}
+
+// GetValidators is a free data retrieval call binding the contract method 0xb7ab4db5.
+//
+// Solidity: function getValidators() constant returns(address[])
+func (_Bscvalidatorset *BscvalidatorsetSession) GetValidators() ([]common.Address, error) {
+	return _Bscvalidatorset.Contract.GetValidators(&_Bscvalidatorset.CallOpts)
+}
+
+// GetValidators is a free data retrieval call binding the contract method 0xb7ab4db5.
+//
+// Solidity: function getValidators() constant returns(address[])
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) GetValidators() ([]common.Address, error) {
+	return _Bscvalidatorset.Contract.GetValidators(&_Bscvalidatorset.CallOpts)
+}
+
+// TotalInComing is a free data retrieval call binding the contract method 0x1ff18069.
+//
+// Solidity: function totalInComing() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCaller) TotalInComing(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Bscvalidatorset.contract.Call(opts, out, "totalInComing")
+	return *ret0, err
+}
+
+// TotalInComing is a free data retrieval call binding the contract method 0x1ff18069.
+//
+// Solidity: function totalInComing() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetSession) TotalInComing() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.TotalInComing(&_Bscvalidatorset.CallOpts)
+}
+
+// TotalInComing is a free data retrieval call binding the contract method 0x1ff18069.
+//
+// Solidity: function totalInComing() constant returns(uint256)
+func (_Bscvalidatorset *BscvalidatorsetCallerSession) TotalInComing() (*big.Int, error) {
+	return _Bscvalidatorset.Contract.TotalInComing(&_Bscvalidatorset.CallOpts)
 }
 
 // Deposit is a paid mutator transaction binding the contract method 0xf340fa01.
@@ -550,48 +1155,6 @@ func (_Bscvalidatorset *BscvalidatorsetTransactorSession) Deposit(valAddr common
 	return _Bscvalidatorset.Contract.Deposit(&_Bscvalidatorset.TransactOpts, valAddr)
 }
 
-// ExpireTimeSecondGap is a paid mutator transaction binding the contract method 0x86249882.
-//
-// Solidity: function expireTimeSecondGap() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) ExpireTimeSecondGap(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "expireTimeSecondGap")
-}
-
-// ExpireTimeSecondGap is a paid mutator transaction binding the contract method 0x86249882.
-//
-// Solidity: function expireTimeSecondGap() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) ExpireTimeSecondGap() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.ExpireTimeSecondGap(&_Bscvalidatorset.TransactOpts)
-}
-
-// ExpireTimeSecondGap is a paid mutator transaction binding the contract method 0x86249882.
-//
-// Solidity: function expireTimeSecondGap() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) ExpireTimeSecondGap() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.ExpireTimeSecondGap(&_Bscvalidatorset.TransactOpts)
-}
-
-// ExtraFee is a paid mutator transaction binding the contract method 0xe20e1fee.
-//
-// Solidity: function extraFee() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) ExtraFee(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "extraFee")
-}
-
-// ExtraFee is a paid mutator transaction binding the contract method 0xe20e1fee.
-//
-// Solidity: function extraFee() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) ExtraFee() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.ExtraFee(&_Bscvalidatorset.TransactOpts)
-}
-
-// ExtraFee is a paid mutator transaction binding the contract method 0xe20e1fee.
-//
-// Solidity: function extraFee() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) ExtraFee() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.ExtraFee(&_Bscvalidatorset.TransactOpts)
-}
-
 // Felony is a paid mutator transaction binding the contract method 0x35409f7f.
 //
 // Solidity: function felony(address validator) returns()
@@ -613,88 +1176,67 @@ func (_Bscvalidatorset *BscvalidatorsetTransactorSession) Felony(validator commo
 	return _Bscvalidatorset.Contract.Felony(&_Bscvalidatorset.TransactOpts, validator)
 }
 
-// FelonySequence is a paid mutator transaction binding the contract method 0x7c973cb6.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function felonySequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) FelonySequence(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "felonySequence")
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetTransactor) HandleAckPackage(opts *bind.TransactOpts, channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.contract.Transact(opts, "handleAckPackage", channelId, msgBytes)
 }
 
-// FelonySequence is a paid mutator transaction binding the contract method 0x7c973cb6.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function felonySequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetSession) FelonySequence() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.FelonySequence(&_Bscvalidatorset.TransactOpts)
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetSession) HandleAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleAckPackage(&_Bscvalidatorset.TransactOpts, channelId, msgBytes)
 }
 
-// FelonySequence is a paid mutator transaction binding the contract method 0x7c973cb6.
+// HandleAckPackage is a paid mutator transaction binding the contract method 0x831d65d1.
 //
-// Solidity: function felonySequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) FelonySequence() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.FelonySequence(&_Bscvalidatorset.TransactOpts)
+// Solidity: function handleAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetTransactorSession) HandleAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleAckPackage(&_Bscvalidatorset.TransactOpts, channelId, msgBytes)
 }
 
-// GetIncoming is a paid mutator transaction binding the contract method 0x565c56b3.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function getIncoming(address validator) returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) GetIncoming(opts *bind.TransactOpts, validator common.Address) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "getIncoming", validator)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetTransactor) HandleFailAckPackage(opts *bind.TransactOpts, channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.contract.Transact(opts, "handleFailAckPackage", channelId, msgBytes)
 }
 
-// GetIncoming is a paid mutator transaction binding the contract method 0x565c56b3.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function getIncoming(address validator) returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) GetIncoming(validator common.Address) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GetIncoming(&_Bscvalidatorset.TransactOpts, validator)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetSession) HandleFailAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleFailAckPackage(&_Bscvalidatorset.TransactOpts, channelId, msgBytes)
 }
 
-// GetIncoming is a paid mutator transaction binding the contract method 0x565c56b3.
+// HandleFailAckPackage is a paid mutator transaction binding the contract method 0xc8509d81.
 //
-// Solidity: function getIncoming(address validator) returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) GetIncoming(validator common.Address) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GetIncoming(&_Bscvalidatorset.TransactOpts, validator)
+// Solidity: function handleFailAckPackage(uint8 channelId, bytes msgBytes) returns()
+func (_Bscvalidatorset *BscvalidatorsetTransactorSession) HandleFailAckPackage(channelId uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleFailAckPackage(&_Bscvalidatorset.TransactOpts, channelId, msgBytes)
 }
 
-// GetValidators is a paid mutator transaction binding the contract method 0xb7ab4db5.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function getValidators() returns(address[])
-func (_Bscvalidatorset *BscvalidatorsetTransactor) GetValidators(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "getValidators")
+// Solidity: function handleSynPackage(uint8 , bytes msgBytes) returns(bytes responsePayload)
+func (_Bscvalidatorset *BscvalidatorsetTransactor) HandleSynPackage(opts *bind.TransactOpts, arg0 uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.contract.Transact(opts, "handleSynPackage", arg0, msgBytes)
 }
 
-// GetValidators is a paid mutator transaction binding the contract method 0xb7ab4db5.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function getValidators() returns(address[])
-func (_Bscvalidatorset *BscvalidatorsetSession) GetValidators() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GetValidators(&_Bscvalidatorset.TransactOpts)
+// Solidity: function handleSynPackage(uint8 , bytes msgBytes) returns(bytes responsePayload)
+func (_Bscvalidatorset *BscvalidatorsetSession) HandleSynPackage(arg0 uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleSynPackage(&_Bscvalidatorset.TransactOpts, arg0, msgBytes)
 }
 
-// GetValidators is a paid mutator transaction binding the contract method 0xb7ab4db5.
+// HandleSynPackage is a paid mutator transaction binding the contract method 0x1182b875.
 //
-// Solidity: function getValidators() returns(address[])
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) GetValidators() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.GetValidators(&_Bscvalidatorset.TransactOpts)
-}
-
-// HandlePackage is a paid mutator transaction binding the contract method 0xe2a2dd4d.
-//
-// Solidity: function handlePackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns()
-func (_Bscvalidatorset *BscvalidatorsetTransactor) HandlePackage(opts *bind.TransactOpts, msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "handlePackage", msgBytes, proof, height, packageSequence)
-}
-
-// HandlePackage is a paid mutator transaction binding the contract method 0xe2a2dd4d.
-//
-// Solidity: function handlePackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns()
-func (_Bscvalidatorset *BscvalidatorsetSession) HandlePackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.HandlePackage(&_Bscvalidatorset.TransactOpts, msgBytes, proof, height, packageSequence)
-}
-
-// HandlePackage is a paid mutator transaction binding the contract method 0xe2a2dd4d.
-//
-// Solidity: function handlePackage(bytes msgBytes, bytes proof, uint64 height, uint64 packageSequence) returns()
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) HandlePackage(msgBytes []byte, proof []byte, height uint64, packageSequence uint64) (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.HandlePackage(&_Bscvalidatorset.TransactOpts, msgBytes, proof, height, packageSequence)
+// Solidity: function handleSynPackage(uint8 , bytes msgBytes) returns(bytes responsePayload)
+func (_Bscvalidatorset *BscvalidatorsetTransactorSession) HandleSynPackage(arg0 uint8, msgBytes []byte) (*types.Transaction, error) {
+	return _Bscvalidatorset.Contract.HandleSynPackage(&_Bscvalidatorset.TransactOpts, arg0, msgBytes)
 }
 
 // Init is a paid mutator transaction binding the contract method 0xe1c7392a.
@@ -737,90 +1279,6 @@ func (_Bscvalidatorset *BscvalidatorsetSession) Misdemeanor(validator common.Add
 // Solidity: function misdemeanor(address validator) returns()
 func (_Bscvalidatorset *BscvalidatorsetTransactorSession) Misdemeanor(validator common.Address) (*types.Transaction, error) {
 	return _Bscvalidatorset.Contract.Misdemeanor(&_Bscvalidatorset.TransactOpts, validator)
-}
-
-// PreviousDepositHeight is a paid mutator transaction binding the contract method 0x4e3e3ca9.
-//
-// Solidity: function previousDepositHeight() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) PreviousDepositHeight(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "previousDepositHeight")
-}
-
-// PreviousDepositHeight is a paid mutator transaction binding the contract method 0x4e3e3ca9.
-//
-// Solidity: function previousDepositHeight() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetSession) PreviousDepositHeight() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.PreviousDepositHeight(&_Bscvalidatorset.TransactOpts)
-}
-
-// PreviousDepositHeight is a paid mutator transaction binding the contract method 0x4e3e3ca9.
-//
-// Solidity: function previousDepositHeight() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) PreviousDepositHeight() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.PreviousDepositHeight(&_Bscvalidatorset.TransactOpts)
-}
-
-// RelayerReward is a paid mutator transaction binding the contract method 0x3f1e4244.
-//
-// Solidity: function relayerReward() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) RelayerReward(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "relayerReward")
-}
-
-// RelayerReward is a paid mutator transaction binding the contract method 0x3f1e4244.
-//
-// Solidity: function relayerReward() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) RelayerReward() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RelayerReward(&_Bscvalidatorset.TransactOpts)
-}
-
-// RelayerReward is a paid mutator transaction binding the contract method 0x3f1e4244.
-//
-// Solidity: function relayerReward() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) RelayerReward() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.RelayerReward(&_Bscvalidatorset.TransactOpts)
-}
-
-// Sequence is a paid mutator transaction binding the contract method 0x529d15cc.
-//
-// Solidity: function sequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) Sequence(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "sequence")
-}
-
-// Sequence is a paid mutator transaction binding the contract method 0x529d15cc.
-//
-// Solidity: function sequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetSession) Sequence() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.Sequence(&_Bscvalidatorset.TransactOpts)
-}
-
-// Sequence is a paid mutator transaction binding the contract method 0x529d15cc.
-//
-// Solidity: function sequence() returns(uint64)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) Sequence() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.Sequence(&_Bscvalidatorset.TransactOpts)
-}
-
-// TotalInComing is a paid mutator transaction binding the contract method 0x1ff18069.
-//
-// Solidity: function totalInComing() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactor) TotalInComing(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _Bscvalidatorset.contract.Transact(opts, "totalInComing")
-}
-
-// TotalInComing is a paid mutator transaction binding the contract method 0x1ff18069.
-//
-// Solidity: function totalInComing() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetSession) TotalInComing() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.TotalInComing(&_Bscvalidatorset.TransactOpts)
-}
-
-// TotalInComing is a paid mutator transaction binding the contract method 0x1ff18069.
-//
-// Solidity: function totalInComing() returns(uint256)
-func (_Bscvalidatorset *BscvalidatorsetTransactorSession) TotalInComing() (*types.Transaction, error) {
-	return _Bscvalidatorset.Contract.TotalInComing(&_Bscvalidatorset.TransactOpts)
 }
 
 // UpdateParam is a paid mutator transaction binding the contract method 0xac431751.
@@ -2097,6 +2555,140 @@ func (_Bscvalidatorset *BscvalidatorsetFilterer) ParseSystemTransfer(log types.L
 	return event, nil
 }
 
+// BscvalidatorsetUnexpectedPackageIterator is returned from FilterUnexpectedPackage and is used to iterate over the raw logs and unpacked data for UnexpectedPackage events raised by the Bscvalidatorset contract.
+type BscvalidatorsetUnexpectedPackageIterator struct {
+	Event *BscvalidatorsetUnexpectedPackage // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *BscvalidatorsetUnexpectedPackageIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(BscvalidatorsetUnexpectedPackage)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(BscvalidatorsetUnexpectedPackage)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *BscvalidatorsetUnexpectedPackageIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *BscvalidatorsetUnexpectedPackageIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// BscvalidatorsetUnexpectedPackage represents a UnexpectedPackage event raised by the Bscvalidatorset contract.
+type BscvalidatorsetUnexpectedPackage struct {
+	ChannelId uint8
+	MsgBytes  []byte
+	Raw       types.Log // Blockchain specific contextual infos
+}
+
+// FilterUnexpectedPackage is a free log retrieval operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
+//
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Bscvalidatorset *BscvalidatorsetFilterer) FilterUnexpectedPackage(opts *bind.FilterOpts) (*BscvalidatorsetUnexpectedPackageIterator, error) {
+
+	logs, sub, err := _Bscvalidatorset.contract.FilterLogs(opts, "unexpectedPackage")
+	if err != nil {
+		return nil, err
+	}
+	return &BscvalidatorsetUnexpectedPackageIterator{contract: _Bscvalidatorset.contract, event: "unexpectedPackage", logs: logs, sub: sub}, nil
+}
+
+// WatchUnexpectedPackage is a free log subscription operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
+//
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Bscvalidatorset *BscvalidatorsetFilterer) WatchUnexpectedPackage(opts *bind.WatchOpts, sink chan<- *BscvalidatorsetUnexpectedPackage) (event.Subscription, error) {
+
+	logs, sub, err := _Bscvalidatorset.contract.WatchLogs(opts, "unexpectedPackage")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(BscvalidatorsetUnexpectedPackage)
+				if err := _Bscvalidatorset.contract.UnpackLog(event, "unexpectedPackage", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseUnexpectedPackage is a log parse operation binding the contract event 0x41ce201247b6ceb957dcdb217d0b8acb50b9ea0e12af9af4f5e7f38902101605.
+//
+// Solidity: event unexpectedPackage(uint8 channelId, bytes msgBytes)
+func (_Bscvalidatorset *BscvalidatorsetFilterer) ParseUnexpectedPackage(log types.Log) (*BscvalidatorsetUnexpectedPackage, error) {
+	event := new(BscvalidatorsetUnexpectedPackage)
+	if err := _Bscvalidatorset.contract.UnpackLog(event, "unexpectedPackage", log); err != nil {
+		return nil, err
+	}
+	return event, nil
+}
+
 // BscvalidatorsetValidatorDepositIterator is returned from FilterValidatorDeposit and is used to iterate over the raw logs and unpacked data for ValidatorDeposit events raised by the Bscvalidatorset contract.
 type BscvalidatorsetValidatorDepositIterator struct {
 	Event *BscvalidatorsetValidatorDeposit // Event containing the contract specifics and raw log
@@ -2453,48 +3045,39 @@ func (it *BscvalidatorsetValidatorFelonyIterator) Close() error {
 
 // BscvalidatorsetValidatorFelony represents a ValidatorFelony event raised by the Bscvalidatorset contract.
 type BscvalidatorsetValidatorFelony struct {
-	Sequence  uint64
 	Validator common.Address
 	Amount    *big.Int
 	Raw       types.Log // Blockchain specific contextual infos
 }
 
-// FilterValidatorFelony is a free log retrieval operation binding the contract event 0x7e770310e43f85c3dca97460dbe1484068514437298ff349e6052595a6ffbdb7.
+// FilterValidatorFelony is a free log retrieval operation binding the contract event 0x3b6f9ef90462b512a1293ecec018670bf7b7f1876fb727590a8a6d7643130a70.
 //
-// Solidity: event validatorFelony(uint64 indexed sequence, address indexed validator, uint256 amount)
-func (_Bscvalidatorset *BscvalidatorsetFilterer) FilterValidatorFelony(opts *bind.FilterOpts, sequence []uint64, validator []common.Address) (*BscvalidatorsetValidatorFelonyIterator, error) {
+// Solidity: event validatorFelony(address indexed validator, uint256 amount)
+func (_Bscvalidatorset *BscvalidatorsetFilterer) FilterValidatorFelony(opts *bind.FilterOpts, validator []common.Address) (*BscvalidatorsetValidatorFelonyIterator, error) {
 
-	var sequenceRule []interface{}
-	for _, sequenceItem := range sequence {
-		sequenceRule = append(sequenceRule, sequenceItem)
-	}
 	var validatorRule []interface{}
 	for _, validatorItem := range validator {
 		validatorRule = append(validatorRule, validatorItem)
 	}
 
-	logs, sub, err := _Bscvalidatorset.contract.FilterLogs(opts, "validatorFelony", sequenceRule, validatorRule)
+	logs, sub, err := _Bscvalidatorset.contract.FilterLogs(opts, "validatorFelony", validatorRule)
 	if err != nil {
 		return nil, err
 	}
 	return &BscvalidatorsetValidatorFelonyIterator{contract: _Bscvalidatorset.contract, event: "validatorFelony", logs: logs, sub: sub}, nil
 }
 
-// WatchValidatorFelony is a free log subscription operation binding the contract event 0x7e770310e43f85c3dca97460dbe1484068514437298ff349e6052595a6ffbdb7.
+// WatchValidatorFelony is a free log subscription operation binding the contract event 0x3b6f9ef90462b512a1293ecec018670bf7b7f1876fb727590a8a6d7643130a70.
 //
-// Solidity: event validatorFelony(uint64 indexed sequence, address indexed validator, uint256 amount)
-func (_Bscvalidatorset *BscvalidatorsetFilterer) WatchValidatorFelony(opts *bind.WatchOpts, sink chan<- *BscvalidatorsetValidatorFelony, sequence []uint64, validator []common.Address) (event.Subscription, error) {
+// Solidity: event validatorFelony(address indexed validator, uint256 amount)
+func (_Bscvalidatorset *BscvalidatorsetFilterer) WatchValidatorFelony(opts *bind.WatchOpts, sink chan<- *BscvalidatorsetValidatorFelony, validator []common.Address) (event.Subscription, error) {
 
-	var sequenceRule []interface{}
-	for _, sequenceItem := range sequence {
-		sequenceRule = append(sequenceRule, sequenceItem)
-	}
 	var validatorRule []interface{}
 	for _, validatorItem := range validator {
 		validatorRule = append(validatorRule, validatorItem)
 	}
 
-	logs, sub, err := _Bscvalidatorset.contract.WatchLogs(opts, "validatorFelony", sequenceRule, validatorRule)
+	logs, sub, err := _Bscvalidatorset.contract.WatchLogs(opts, "validatorFelony", validatorRule)
 	if err != nil {
 		return nil, err
 	}
@@ -2526,9 +3109,9 @@ func (_Bscvalidatorset *BscvalidatorsetFilterer) WatchValidatorFelony(opts *bind
 	}), nil
 }
 
-// ParseValidatorFelony is a log parse operation binding the contract event 0x7e770310e43f85c3dca97460dbe1484068514437298ff349e6052595a6ffbdb7.
+// ParseValidatorFelony is a log parse operation binding the contract event 0x3b6f9ef90462b512a1293ecec018670bf7b7f1876fb727590a8a6d7643130a70.
 //
-// Solidity: event validatorFelony(uint64 indexed sequence, address indexed validator, uint256 amount)
+// Solidity: event validatorFelony(address indexed validator, uint256 amount)
 func (_Bscvalidatorset *BscvalidatorsetFilterer) ParseValidatorFelony(log types.Log) (*BscvalidatorsetValidatorFelony, error) {
 	event := new(BscvalidatorsetValidatorFelony)
 	if err := _Bscvalidatorset.contract.UnpackLog(event, "validatorFelony", log); err != nil {

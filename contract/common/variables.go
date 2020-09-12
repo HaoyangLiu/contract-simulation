@@ -5,7 +5,9 @@ import (
 )
 
 const (
-	TestnetEndpoint = "https://data-seed-prebsc-1-s1.binance.org:8545"
+	MainnetEndpoint = "https://bsc-dataseed1.binance.org:443"
+	TestnetEndpoint = "https://data-seed-prebsc-2-s2.binance.org:8545"
+	TestnetEndpointNew = "https://data-seed-prebsc-1-s1.binance.org:8545"
 	DevEndpoint= "http://dex-qa-s1-bsc-dev-validator-alb-501442930.ap-northeast-1.elb.amazonaws.com:8545"
 )
 
@@ -18,4 +20,6 @@ var (
 	TokenHub              = common.HexToAddress("0x0000000000000000000000000000000000001004")
 	RelayerIncentivize    = common.HexToAddress("0x0000000000000000000000000000000000001005")
 	RelayerHub            = common.HexToAddress("0x0000000000000000000000000000000000001006")
+	TokenManager          = common.HexToAddress("0x0000000000000000000000000000000000001008")
+	CrossChain            = common.HexToAddress("0x0000000000000000000000000000000000002000")
 )
